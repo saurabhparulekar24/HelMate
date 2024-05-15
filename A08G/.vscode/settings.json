@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "nm_bsp_samd21.h": "c",
+        "secret.h": "c",
+        "utils.h": "c",
+        "atmel_start.h": "c",
+        "driver_init.h": "c",
+        "system.h": "c"
+    },
+    "cSpell.words": [
+        "daisychain"
+    ]
+}

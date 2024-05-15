@@ -1,0 +1,3 @@
+[submodule "Python_GUI"]
+	path = Python_GUI
+	url = https://github.com/saurabhparulekar24/SerialTerminalApp

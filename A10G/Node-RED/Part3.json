@@ -1,0 +1,1539 @@
+[
+    {
+        "id": "9e09cf13df836b51",
+        "type": "tab",
+        "label": "HelMet Node-Red Implementation",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b4b667e1ffa98dd2",
+        "type": "ui_button",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate Right",
+        "group": "b",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Simulate Right",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Right",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "95c9c6c36ebe3195"
+            ]
+        ]
+    },
+    {
+        "id": "95c9c6c36ebe3195",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Process Command",
+        "func": "var command = msg.payload;\n\nif (command === 'Right' || command === 'Left') {\n    msg.payload = { direction: command, motor: 'Vibrate', led: 'Yellow' };\n} else if (command === 'Stop') {\n    msg.payload = { direction: 'None', motor: 'Stop', led: 'Red' };\n} else if (command === 'Go Straight') {\n    msg.payload = { direction: 'Forward', motor: 'Vibrate Both', led: 'Green' };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "8ecdf893c0744019",
+                "6e5bda7e8bfd3f59"
+            ]
+        ]
+    },
+    {
+        "id": "8ecdf893c0744019",
+        "type": "ui_text",
+        "z": "9e09cf13df836b51",
+        "group": "b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Display Command",
+        "label": "Action",
+        "format": "{{msg.payload.direction}} - Motor: {{msg.payload.motor}} - LED: {{msg.payload.led}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 730,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5c8495909b8e2423",
+        "type": "ui_button",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate Left",
+        "group": "b",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Simulate Left",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Left",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "95c9c6c36ebe3195"
+            ]
+        ]
+    },
+    {
+        "id": "6e5bda7e8bfd3f59",
+        "type": "debug",
+        "z": "9e09cf13df836b51",
+        "name": "debug Navigation",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4e1910b9e3adab71",
+        "type": "comment",
+        "z": "9e09cf13df836b51",
+        "name": "Navigation and LED",
+        "info": "",
+        "x": 230,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "209baa30515eea37",
+        "type": "ui_numeric",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate Right Input Distance",
+        "label": "Enter Right Distance (cm)",
+        "tooltip": "Enter the distance measured by IR sensor",
+        "group": "d9a354e611064697",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "helmet/obstacle/rightblindspot",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "step": 1,
+        "className": "",
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "9dbf84f5445b455c"
+            ]
+        ]
+    },
+    {
+        "id": "9dbf84f5445b455c",
+        "type": "mqtt out",
+        "z": "9e09cf13df836b51",
+        "name": "Send Proximity Data",
+        "topic": "helmet/obstacle/rightblindspot",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 640,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3cc55fe9608c7c97",
+        "type": "mqtt in",
+        "z": "9e09cf13df836b51",
+        "name": "Receive Proximity Data",
+        "topic": "helmet/obstacle/rightblindspot",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 210,
+        "y": 480,
+        "wires": [
+            [
+                "f7935a589f7cba3f"
+            ]
+        ]
+    },
+    {
+        "id": "f7935a589f7cba3f",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Check Distance Threshold",
+        "func": "const distance = Number(msg.payload);\nconst threshold = 50; // Distance threshold in cm\nif (distance < threshold) {\n    msg.payload = 'Keeping Vibrating'; // Simulate haptic motor vibration\n} else {\n    msg.payload = 'No Vibration'; // No action needed\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 480,
+        "wires": [
+            [
+                "fffd76f95beaea16",
+                "09bd0546aba41b52",
+                "9ecbc4ceabc670e0"
+            ]
+        ]
+    },
+    {
+        "id": "fffd76f95beaea16",
+        "type": "ui_text",
+        "z": "9e09cf13df836b51",
+        "group": "d9a354e611064697",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Motor Vibration Alert",
+        "label": "Right Haptic Feedback",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 960,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "09bd0546aba41b52",
+        "type": "debug",
+        "z": "9e09cf13df836b51",
+        "name": "debug IR Sensor",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e498a0b9692cd77f",
+        "type": "comment",
+        "z": "9e09cf13df836b51",
+        "name": "Right Obstacle Detection",
+        "info": "",
+        "x": 250,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9ecbc4ceabc670e0",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 3,
+        "group": "d9a354e611064697",
+        "width": 0,
+        "height": 0,
+        "label": "Right Obstacle Detection",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "Keeping Vibrating",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "No Vibration",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Right Obstacle Detection",
+        "x": 950,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ef39b09e71662410",
+        "type": "ui_button",
+        "z": "9e09cf13df836b51",
+        "name": "Start Firmware Update",
+        "group": "ceba5008abc8f398",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start Firmware Update",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "fw",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 240,
+        "y": 980,
+        "wires": [
+            [
+                "51a07f2526239a09"
+            ]
+        ]
+    },
+    {
+        "id": "51a07f2526239a09",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate Firmware Command",
+        "func": "const firmwareVersion = '1.0.1'; // Simulated new firmware version\nmsg.payload = JSON.stringify({\n    command: msg.payload,\n    filename: `firmware_${firmwareVersion}.bin`,\n    version: firmwareVersion\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 980,
+        "wires": [
+            [
+                "d8ae8085c43758ac",
+                "fd7e920d4dd0529d"
+            ]
+        ]
+    },
+    {
+        "id": "d8ae8085c43758ac",
+        "type": "mqtt out",
+        "z": "9e09cf13df836b51",
+        "name": "Send Firmware Command",
+        "topic": "helmet/firmware/command",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_config",
+        "x": 1020,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "fcd496a1b5be3818",
+        "type": "mqtt in",
+        "z": "9e09cf13df836b51",
+        "name": "Receive Firmware Command",
+        "topic": "helmet/firmware/command",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 190,
+        "y": 1080,
+        "wires": [
+            [
+                "f66ec6cb69bc5684",
+                "33e3f37a4f418dc6"
+            ]
+        ]
+    },
+    {
+        "id": "f66ec6cb69bc5684",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Process Firmware Command",
+        "func": "// Correctly parsing the JSON string back into an object.\nconst updateDetails = msg.payload; // This is necessary if msg.payload is a string.\n\nif (Math.random() < 0.8) { // Simulating a success rate of 80%\n    msg.payload = 'Updated';\n    msg.topic = updateDetails.version;\n} else {\n    msg.payload = 'No Updated';\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1080,
+        "wires": [
+            [
+                "86874d5b5223db13",
+                "9da52105a58f0bbe",
+                "e6df1bd7fcca1d08"
+            ]
+        ]
+    },
+    {
+        "id": "86874d5b5223db13",
+        "type": "ui_text",
+        "z": "9e09cf13df836b51",
+        "group": "ceba5008abc8f398",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Firmware Version Display",
+        "label": "Firmware Version",
+        "format": "{{msg.topic}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 790,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "9da52105a58f0bbe",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 2,
+        "group": "ceba5008abc8f398",
+        "width": 0,
+        "height": 0,
+        "label": "Updated Status",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "No Updated",
+                "valueType": "str"
+            },
+            {
+                "color": "#00ff00",
+                "value": "Updated",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Update LED Indicator",
+        "x": 760,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "33e3f37a4f418dc6",
+        "type": "debug",
+        "z": "9e09cf13df836b51",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "fd7e920d4dd0529d",
+        "type": "debug",
+        "z": "9e09cf13df836b51",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "b3829d64bcec5339",
+        "type": "comment",
+        "z": "9e09cf13df836b51",
+        "name": "Firmware Update",
+        "info": "",
+        "x": 240,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "e6df1bd7fcca1d08",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 2,
+        "group": "ceba5008abc8f398",
+        "width": 0,
+        "height": 0,
+        "label": "Failed Status",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "No Updated",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Update LED Indicator",
+        "x": 760,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "6c2137f54f8983c2",
+        "type": "inject",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate Accelerometer Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 1360,
+        "wires": [
+            [
+                "0d771f6c1cf2e1fe"
+            ]
+        ]
+    },
+    {
+        "id": "0d771f6c1cf2e1fe",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Generate XYZ Data",
+        "func": "var x = {};\nvar y = {};\nvar z = {};\nx.payload = Math.round(Math.random() * 20 - 10);\nx.topic = 'X';\ny.payload = Math.round(Math.random() * 20 - 10);\ny.topic = 'Y';\nz.payload = Math.round(Math.random() * 30 - 10);\nz.topic = 'Z';\nreturn [x, y, z];\n",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1400,
+        "wires": [
+            [
+                "26312bbf521f40c7",
+                "100ef43e341728f6"
+            ],
+            [
+                "26312bbf521f40c7",
+                "335ba07455159d2b"
+            ],
+            [
+                "26312bbf521f40c7",
+                "35be32156cd937f2"
+            ]
+        ]
+    },
+    {
+        "id": "b11420df3ac32d5f",
+        "type": "mqtt out",
+        "z": "9e09cf13df836b51",
+        "name": "Send Motion Status",
+        "topic": "helmet/motion/status",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 1260,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "2eb26f69b656a296",
+        "type": "mqtt in",
+        "z": "9e09cf13df836b51",
+        "name": "Receive Motion Status",
+        "topic": "helmet/motion/status",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 320,
+        "y": 1620,
+        "wires": [
+            [
+                "541a07b8d7d0569d",
+                "09cd0dcacebb4f1d",
+                "e54415380c7b81fd"
+            ]
+        ]
+    },
+    {
+        "id": "a46f23573cd26530",
+        "type": "ui_text",
+        "z": "9e09cf13df836b51",
+        "group": "e15721ae1273ba69",
+        "order": 1,
+        "width": "",
+        "height": "",
+        "name": "Motion Status Display",
+        "label": "Motion Status",
+        "format": "{{msg.payload}}",
+        "layout": "",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1180,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "26312bbf521f40c7",
+        "type": "join",
+        "z": "9e09cf13df836b51",
+        "name": "Join XYZ Data",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 740,
+        "y": 1320,
+        "wires": [
+            [
+                "5673f0a4083e9aeb"
+            ]
+        ]
+    },
+    {
+        "id": "5673f0a4083e9aeb",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Determine Motion Status",
+        "func": "// Function node code to determine motion status\nconst x = msg.payload[\"X\"];\nconst y = msg.payload[\"Y\"];\nconst z = msg.payload[\"Z\"];\n\n// Calculate the magnitude of the vector (Euclidean norm)\nconst magnitude = Math.sqrt(x * x + y * y + z * z);\n\n// Define thresholds for the motion states\nconst stationaryThreshold = 10; // Threshold below which the status is 'Stationary'\nconst crashThreshold = 15; // Threshold above which the status is 'Crash'\n\n// Determine the motion status based on the magnitude of acceleration\nlet motionStatus;\nif (magnitude < stationaryThreshold) {\n    motionStatus = 'Stationary';\n} else if (magnitude >= crashThreshold) {\n    motionStatus = 'Crash';\n} else {\n    motionStatus = 'In Motion';\n}\n\n// Set the motion status in the message payload\n// msg.payload = { status: motionStatus, magnitude: magnitude };\nmsg.payload = { status: motionStatus};\n// msg.payload = motionStatus;\n// Return the updated message\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 1340,
+        "wires": [
+            [
+                "b11420df3ac32d5f",
+                "a46f23573cd26530"
+            ]
+        ]
+    },
+    {
+        "id": "100ef43e341728f6",
+        "type": "ui_chart",
+        "z": "9e09cf13df836b51",
+        "name": "X Chart",
+        "group": "e15721ae1273ba69",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "label": "X-Axis Data",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Waiting for data...",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#b31e1e",
+            "#053de6",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#000000",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "335ba07455159d2b",
+        "type": "ui_chart",
+        "z": "9e09cf13df836b51",
+        "name": "Y Chart",
+        "group": "e15721ae1273ba69",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "label": "Y-Axis Data",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Waiting for data...",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35be32156cd937f2",
+        "type": "ui_chart",
+        "z": "9e09cf13df836b51",
+        "name": "Z Chart",
+        "group": "e15721ae1273ba69",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "label": "Z-Axis Data",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Waiting for data...",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff781f",
+            "#aec7e8",
+            "#151413",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "541a07b8d7d0569d",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Crash Detection",
+        "func": "// Function node code to detect a potential crash\nconst currentStatus = msg.payload.status; // Extract the status from the payload\n\n// Determine crash status\nconst potentialCrash = currentStatus === 'Crash';\n\n// Prepare message payload for potential crash LED indicator\n// True will turn the LED on, indicating a potential crash, and false will turn it off\nconst crashMsg = { payload: potentialCrash };\n\n// Output the message to be wired to the LED node for crash indication\nreturn crashMsg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1800,
+        "wires": [
+            [
+                "19d113aa7cd5235b"
+            ]
+        ]
+    },
+    {
+        "id": "19d113aa7cd5235b",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 2,
+        "group": "e15721ae1273ba69",
+        "width": 0,
+        "height": 0,
+        "label": "Potential Crash Detection",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Crash Detection",
+        "x": 920,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "09cd0dcacebb4f1d",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Stationary Function",
+        "func": "// const status = msg.payload;\n// const unlocked = status === 'In Motion';\n// const locked = status === 'Stationary';\n// return [{ payload: unlocked }, { payload: locked }];\n\n// Function node code to detect a potential crash\nconst currentStatus = msg.payload.status; // Extract the status from the payload\n\n// Determine crash status\nconst islocked = currentStatus === 'Stationary';\n\n// Prepare message payload for potential crash LED indicator\n// True will turn the LED on, indicating a potential crash, and false will turn it off\nconst islockedMsg = { payload: islocked };\n\n// Output the message to be wired to the LED node for crash indication\nreturn islockedMsg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1720,
+        "wires": [
+            [
+                "a262892a3ee46240"
+            ]
+        ]
+    },
+    {
+        "id": "a262892a3ee46240",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 2,
+        "group": "e15721ae1273ba69",
+        "width": 0,
+        "height": 0,
+        "label": "Locked Status",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Lock Status",
+        "x": 910,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "b5cbbf941b501f66",
+        "type": "comment",
+        "z": "9e09cf13df836b51",
+        "name": "3-axis Accelerometer",
+        "info": "",
+        "x": 160,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "d50542c89993ddf0",
+        "type": "ui_numeric",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate Left Input Distance",
+        "label": "Enter Left Distance (cm)",
+        "tooltip": "Enter the distance measured by IR sensor",
+        "group": "ui_group_accelerometer",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "helmet/obstacle/leftblindspot",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "step": 1,
+        "className": "",
+        "x": 240,
+        "y": 640,
+        "wires": [
+            [
+                "90998859f7f75b04"
+            ]
+        ]
+    },
+    {
+        "id": "90998859f7f75b04",
+        "type": "mqtt out",
+        "z": "9e09cf13df836b51",
+        "name": "Send Left Proximity Data",
+        "topic": "helmet/obstacle/leftblindspot",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 630,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "bab14293bc9993d1",
+        "type": "mqtt in",
+        "z": "9e09cf13df836b51",
+        "name": "Receive Left Proximity Data",
+        "topic": "helmet/obstacle/leftblindspot",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 210,
+        "y": 740,
+        "wires": [
+            [
+                "512f2e51577fa06d"
+            ]
+        ]
+    },
+    {
+        "id": "512f2e51577fa06d",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Check Distance Threshold",
+        "func": "const leftDistance = Number(msg.payload);\nconst leftThreshold = 50; // Distance threshold in cm\nif (leftDistance < leftThreshold) {\n    msg.payload = 'Keeping Vibrating'; // Simulate haptic motor vibration\n} else {\n    msg.payload = 'No Vibration'; // No action needed\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 740,
+        "wires": [
+            [
+                "395147f881e48ad4",
+                "21da8359c17559cb",
+                "f2927ad93803e916"
+            ]
+        ]
+    },
+    {
+        "id": "395147f881e48ad4",
+        "type": "ui_text",
+        "z": "9e09cf13df836b51",
+        "group": "ui_group_accelerometer",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Motor Vibration Alert",
+        "label": "Left Haptic Feedback",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 940,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "21da8359c17559cb",
+        "type": "debug",
+        "z": "9e09cf13df836b51",
+        "name": "debug IR Sensor",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "dc126b7aafb5a3c0",
+        "type": "comment",
+        "z": "9e09cf13df836b51",
+        "name": "Left Obstacle Detection",
+        "info": "",
+        "x": 220,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "f2927ad93803e916",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 3,
+        "group": "ui_group_accelerometer",
+        "width": 0,
+        "height": 0,
+        "label": "Left Obstacle Detection",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "Keeping Vibrating",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "No Vibration",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Left Obstacle Detection",
+        "x": 930,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "45325a73faade08b",
+        "type": "comment",
+        "z": "9e09cf13df836b51",
+        "name": "Standby and Lock System",
+        "info": "",
+        "x": 360,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "e54415380c7b81fd",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "In Motion Function!",
+        "func": "// const status = msg.payload;\n// const unlocked = status === 'In Motion';\n// const locked = status === 'Stationary';\n// return [{ payload: unlocked }, { payload: locked }];\n\n// Function node code to detect a potential crash\nconst currentStatus = msg.payload.status; // Extract the status from the payload\n\n// Determine crash status\nconst isUnlocked = currentStatus === 'In Motion';\n\n// Prepare message payload for potential crash LED indicator\n// True will turn the LED on, indicating a potential crash, and false will turn it off\nconst isUnlockedMsg = { payload: isUnlocked };\n\n// Output the message to be wired to the LED node for crash indication\nreturn isUnlockedMsg;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1620,
+        "wires": [
+            [
+                "20381d3d694f24c2"
+            ]
+        ]
+    },
+    {
+        "id": "20381d3d694f24c2",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 2,
+        "group": "e15721ae1273ba69",
+        "width": 0,
+        "height": 0,
+        "label": "UnLocked Status",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "UnLock Status",
+        "x": 920,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "606d3c6e58d2377c",
+        "type": "ui_button",
+        "z": "9e09cf13df836b51",
+        "name": "Lock Helmet",
+        "group": "ui_group_status",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Lock Helmet",
+        "tooltip": "Locks the Helmet",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-lock",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "lockStatus",
+        "x": 430,
+        "y": 2220,
+        "wires": [
+            [
+                "37bd3d8d25d105e7"
+            ]
+        ]
+    },
+    {
+        "id": "352b4d07a3d3401d",
+        "type": "ui_button",
+        "z": "9e09cf13df836b51",
+        "name": "Unlock Helmet",
+        "group": "ui_group_status",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Unlock Helmet",
+        "tooltip": "Unlocks the Helmet",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-unlock",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "lockStatus",
+        "x": 430,
+        "y": 2260,
+        "wires": [
+            [
+                "37bd3d8d25d105e7"
+            ]
+        ]
+    },
+    {
+        "id": "37bd3d8d25d105e7",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Lock/Unlock Helmet",
+        "func": "flow.set('helmetLocked', msg.payload);\nreturn msg;",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 2240,
+        "wires": [
+            [
+                "9aeba3f0d2306b22",
+                "506a7721eae9569e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9aeba3f0d2306b22",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 3,
+        "group": "ui_group_status",
+        "width": 0,
+        "height": 0,
+        "label": "Locked",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Lock LED Indicator",
+        "x": 870,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "506a7721eae9569e",
+        "type": "ui_led",
+        "z": "9e09cf13df836b51",
+        "order": 3,
+        "group": "ui_group_status",
+        "width": 0,
+        "height": 0,
+        "label": "Unlocked",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Unlock LED Indicator",
+        "x": 870,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "d0e1be3a10ab751e",
+        "type": "ui_button",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate If HelMate Standby",
+        "group": "ui_group_status",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Simulate Standby",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "helmate",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 340,
+        "y": 1960,
+        "wires": [
+            [
+                "7f41b03085e0ab07"
+            ]
+        ]
+    },
+    {
+        "id": "7f41b03085e0ab07",
+        "type": "function",
+        "z": "9e09cf13df836b51",
+        "name": "Process Command",
+        "func": "var command = msg.payload;\n\nif (command === 'helmate') {\n    msg.payload = { helmate: 'Is StandBy'};\n} else if (command === 'helMate'){\n    msg.payload = { helmate: 'Is Left Behind'};\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 2000,
+        "wires": [
+            [
+                "b41f5e6c6eb59746",
+                "49414e7f1f2eee27"
+            ]
+        ]
+    },
+    {
+        "id": "b41f5e6c6eb59746",
+        "type": "ui_text",
+        "z": "9e09cf13df836b51",
+        "group": "ui_group_status",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Display Helmate Command",
+        "label": "HelMate",
+        "format": "{{msg.payload.helmate}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "49414e7f1f2eee27",
+        "type": "debug",
+        "z": "9e09cf13df836b51",
+        "name": "debug Navigation",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "0f62d981b87fc59d",
+        "type": "ui_button",
+        "z": "9e09cf13df836b51",
+        "name": "Simulate If HelMate NOT Standby",
+        "group": "ui_group_status",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Simulate Not Standby",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "helMate",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 360,
+        "y": 2020,
+        "wires": [
+            [
+                "7f41b03085e0ab07"
+            ]
+        ]
+    },
+    {
+        "id": "b",
+        "type": "ui_group",
+        "name": "Navigation System",
+        "tab": "c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d9a354e611064697",
+        "type": "ui_group",
+        "name": "Right Obstacle Detection",
+        "tab": "c",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8fde701c.6c6c3",
+        "type": "mqtt-broker",
+        "name": "AzureMqttBroker",
+        "broker": "52.242.73.67",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ceba5008abc8f398",
+        "type": "ui_group",
+        "name": "Firmware Update",
+        "tab": "c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "mqtt_broker_config",
+        "type": "mqtt-broker",
+        "name": "AzureMqttBroker",
+        "broker": "52.242.73.67",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e15721ae1273ba69",
+        "type": "ui_group",
+        "name": "Motion System",
+        "tab": "c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ui_group_accelerometer",
+        "type": "ui_group",
+        "name": "Left Obstacle Detection",
+        "tab": "c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ui_group_status",
+        "type": "ui_group",
+        "name": "HelmMate Standby",
+        "tab": "c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c",
+        "type": "ui_tab",
+        "name": "Helmet Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

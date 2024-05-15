@@ -1,0 +1,174 @@
+[
+    {
+        "id": "948bf686c2464605",
+        "type": "tab",
+        "label": "Bidirectional",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "361b60dd5b10ec20",
+        "type": "ui_button",
+        "z": "948bf686c2464605",
+        "name": "",
+        "group": "7439f979.e3ee18",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 80,
+        "wires": [
+            [
+                "fc9b08b5ed781561"
+            ]
+        ]
+    },
+    {
+        "id": "fc9b08b5ed781561",
+        "type": "mqtt out",
+        "z": "948bf686c2464605",
+        "name": "",
+        "topic": "P1_LED_ESE516_T0",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ed155da91b8ef34c",
+        "type": "mqtt in",
+        "z": "948bf686c2464605",
+        "name": "",
+        "topic": "P1_TEMPERATURE_ESE516_T0",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "bd74c902365d6d3a",
+                "0041da1f588a42f0"
+            ]
+        ]
+    },
+    {
+        "id": "bd74c902365d6d3a",
+        "type": "ui_led",
+        "z": "948bf686c2464605",
+        "order": 1,
+        "group": "7439f979.e3ee18",
+        "width": 0,
+        "height": 0,
+        "label": "LED",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "0041da1f588a42f0",
+        "type": "debug",
+        "z": "948bf686c2464605",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7439f979.e3ee18",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "c19ddfcf.06e82",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8fde701c.6c6c3",
+        "type": "mqtt-broker",
+        "name": "AzureMqttBroker",
+        "broker": "52.242.73.67",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c19ddfcf.06e82",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,1162 @@
+T2934 3076:988.160   SEGGER J-Link V7.96d Log File
+T2934 3076:988.160   DLL Compiled: Apr 10 2024 08:27:25
+T2934 3076:988.416   Logging started @ 2024-04-13 17:46
+T2934 3076:988.416   Process: C:\Program Files (x86)\Atmel\Studio\7.0\atbackend\atbackend.exe
+T2934 3076:988.416 - 582544.192ms
+T2934 3076:996.352 JLINK_ExecCommand("Device = ATSAMD21G18A", ...). 
+T2934 3076:996.608   Device "ATSAMD21G18A" selected.
+T2934 3076:996.864 - 0.667ms returns 0x00
+T2934 3077:017.088 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T2934 3077:018.112 - 0.685ms returns 0x00
+T2934 3077:018.112 JLINK_SetSpeed(4000)
+T2934 3077:018.112 - 0.125ms
+T2934 3077:018.112 JLINK_ResetPullsRESET(OFF)
+T2934 3077:018.112 - 0.051ms
+T2934 3077:018.368 JLINK_Connect()
+T2934 3077:018.624   InitTarget() start
+T2934 3077:018.880    J-Link Script File: Executing InitTarget()
+T2934 3077:018.880   InitTarget()
+T2934 3077:021.184   InitTarget() end - Took 2.46ms
+T2934 3077:022.208   Found SW-DP with ID 0x0BC11477
+T2934 3077:024.256   DPIDR: 0x0BC11477
+T2934 3077:024.256   CoreSight SoC-400 or earlier
+T2934 3077:024.256   Scanning AP map to find all available APs
+T2934 3077:025.024   AP[1]: Stopped AP scan as end of AP map has been reached
+T2934 3077:025.024   AP[0]: AHB-AP (IDR: 0x04770031)
+T2934 3077:025.024   Iterating through AP map to find AHB-AP to use
+T2934 3077:026.048   AP[0]: Core found
+T2934 3077:026.048   AP[0]: AHB-AP ROM base: 0x41003000
+T2934 3077:026.304   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+T2934 3077:026.560   Found Cortex-M0 r0p1, Little endian.
+T2934 3077:026.816   -- Max. mem block: 0x000013E0
+T2934 3077:027.328   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2934 3077:027.584   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T2934 3077:028.096   CPU_ReadMem(4 bytes @ 0xE0002000)
+T2934 3077:028.352   FPUnit: 4 code (BP) slots and 0 literal slots
+T2934 3077:028.352   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2934 3077:028.608   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2934 3077:029.120   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2934 3077:029.376   CPU_WriteMem(4 bytes @ 0xE0001000)
+T2934 3077:029.632   CoreSight components:
+T2934 3077:029.888   ROMTbl[0] @ 41003000
+T2934 3077:029.888   CPU_ReadMem(64 bytes @ 0x41003000)
+T2934 3077:030.400   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+T2934 3077:031.168   [0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+T2934 3077:031.168   ROMTbl[1] @ E00FF000
+T2934 3077:031.168   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T2934 3077:031.936   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T2934 3077:032.448   [1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+T2934 3077:032.448   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T2934 3077:032.960   [1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+T2934 3077:033.216   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T2934 3077:033.472   [1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+T2934 3077:033.728   CPU_ReadMem(32 bytes @ 0x41006FE0)
+T2934 3077:034.240   [0][1]: 41006000 CID B105900D PID 001BB932 MTB-M0+
+T2934 3077:034.496 - 15.974ms returns 0x00
+T2934 3077:034.496 JLINK_ExecCommand("ExcludeFlashCacheRange 0x0 - 0x40000", ...). 
+T2934 3077:034.496 - 0.001ms returns 0x00
+T2934 3077:034.496 JLINK_Halt()
+T2934 3077:037.312 - 2.790ms returns 0x00
+T2934 3077:039.104 JLINK_JTAG_GetDeviceID(DeviceIndex = 0)
+T2934 3077:039.104 - 0.055ms returns 0
+T2934 3077:039.360 JLINK_ReadMemU32(0x41002018, 0x1 Items)
+T2934 3077:039.360   CPU_ReadMem(4 bytes @ 0x41002018)
+T2934 3077:039.616   Data:  05 03 01 10
+T2934 3077:039.616 - 0.487ms returns 1 (0x1)
+T3200 3077:049.600 JLINK_IsHalted()
+T3200 3077:049.856 - 0.434ms returns TRUE
+T3200 3077:049.856 JLINK_GetMOEs(...)
+T3200 3077:049.856   CPU_ReadMem(4 bytes @ 0xE000ED30)
+T3200 3077:050.368 - 0.441ms returns 0x01
+T3200 3077:050.368 JLINK_ReadReg(R15 (PC))
+T3200 3077:050.368 - 0.027ms returns 0x00005DA4
+T2934 3077:150.208 JLINK_BeginDownload(Flags = 0x00000000)
+T2934 3077:150.208 - 0.051ms
+T2934 3077:150.208 JLINK_WriteMem(0x00000000, 0x26F84 Bytes, ...)
+T2934 3077:150.208   Data:  38 77 00 20 31 7E 01 00 29 7F 01 00 29 7F 01 00 ...
+T2934 3077:150.464   completely In flash
+T2934 3077:150.720 - 0.596ms returns 0x26F84
+T2934 3077:150.976 JLINK_WriteMem(0x00026F84, 0x310 Bytes, ...)
+T2934 3077:150.976   Data:  00 00 00 00 0C 00 00 00 00 00 00 00 00 00 00 00 ...
+T2934 3077:151.232   completely In flash
+T2934 3077:151.232 - 0.148ms returns 0x310
+T2A38 3077:244.672 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T2A38 3077:245.952   [0]: USB, S/N: 801041338
+T2A38 3077:246.208 - 1.294ms returns 1
+T2A38 3077:246.208 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T2A38 3077:270.272 - 24.259ms returns 0
+T3200 3077:270.528 JLINK_IsHalted()
+T3200 3077:270.528 - 0.044ms returns TRUE
+T2934 3077:271.040 JLINK_EndDownload()
+T2934 3077:271.296   CPU_ReadMem(4 bytes @ 0x41006004)
+T2934 3077:271.808   CPU_ReadMem(4 bytes @ 0xE000ED90)
+T2934 3077:272.064    -- --------------------------------------
+T2934 3077:272.064    -- Flash bank @ 0x00000000: Default: L2 verify disabled because algorithm performs L1 verify
+T2934 3077:272.064    -- Start of determining dirty areas in flash cache
+T2934 3077:272.064    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000000 if necessary
+T2934 3077:272.064    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000100 if necessary
+T2934 3077:272.064    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000200 if necessary
+T2934 3077:272.064    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000300 if necessary
+T2934 3077:272.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000400 if necessary
+T2934 3077:272.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000500 if necessary
+T2934 3077:272.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000600 if necessary
+T2934 3077:272.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000700 if necessary
+T2934 3077:272.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000800 if necessary
+T2934 3077:272.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000900 if necessary
+T2934 3077:272.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000A00 if necessary
+T2934 3077:272.576    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000B00 if necessary
+T2934 3077:272.576    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000C00 if necessary
+T2934 3077:272.576    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000D00 if necessary
+T2934 3077:272.576    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000E00 if necessary
+T2934 3077:272.576    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000F00 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001000 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001100 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001200 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001300 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001400 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001500 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001600 if necessary
+T2934 3077:272.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001700 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001800 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001900 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001A00 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001B00 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001C00 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001D00 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001E00 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001F00 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002000 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002100 if necessary
+T2934 3077:273.088    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002200 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002300 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002400 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002500 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002600 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002700 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002800 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002900 if necessary
+T2934 3077:273.344    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002A00 if necessary
+T2934 3077:273.600    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002B00 if necessary
+T2934 3077:273.600    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002C00 if necessary
+T2934 3077:273.600    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002D00 if necessary
+T2934 3077:273.600    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002E00 if necessary
+T2934 3077:273.600    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002F00 if necessary
+T2934 3077:273.600    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003000 if necessary
+T2934 3077:273.600    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003100 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003200 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003300 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003400 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003500 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003600 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003700 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003800 if necessary
+T2934 3077:273.856    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003900 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003A00 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003B00 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003C00 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003D00 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003E00 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003F00 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004000 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004100 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004200 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004300 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004400 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004500 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004600 if necessary
+T2934 3077:274.112    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004700 if necessary
+T2934 3077:274.368    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004800 if necessary
+T2934 3077:274.368    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004900 if necessary
+T2934 3077:274.368    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004A00 if necessary
+T2934 3077:274.368    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004B00 if necessary
+T2934 3077:274.624    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004C00 if necessary
+T2934 3077:274.624    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004D00 if necessary
+T2934 3077:274.624    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004E00 if necessary
+T2934 3077:274.624    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004F00 if necessary
+T2934 3077:274.624    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005000 if necessary
+T2934 3077:274.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005100 if necessary
+T2934 3077:274.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005200 if necessary
+T2934 3077:274.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005300 if necessary
+T2934 3077:274.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005400 if necessary
+T2934 3077:274.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005500 if necessary
+T2934 3077:274.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005600 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005700 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005800 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005900 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005A00 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005B00 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005C00 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005D00 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005E00 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005F00 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006000 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006100 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006200 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006300 if necessary
+T2934 3077:275.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006400 if necessary
+T2934 3077:275.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006500 if necessary
+T2934 3077:275.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006600 if necessary
+T2934 3077:275.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006700 if necessary
+T2934 3077:275.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006800 if necessary
+T2934 3077:275.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006900 if necessary
+T2934 3077:275.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006A00 if necessary
+T2934 3077:275.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006B00 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006C00 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006D00 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006E00 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006F00 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007000 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007100 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007200 if necessary
+T2934 3077:275.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007300 if necessary
+T2934 3077:275.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007400 if necessary
+T2934 3077:275.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007500 if necessary
+T2934 3077:275.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007600 if necessary
+T2934 3077:275.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007700 if necessary
+T2934 3077:275.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007800 if necessary
+T2934 3077:275.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007900 if necessary
+T2934 3077:275.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007A00 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007B00 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007C00 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007D00 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007E00 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007F00 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008000 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008100 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008200 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008300 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008400 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008500 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008600 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008700 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008800 if necessary
+T2934 3077:276.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008900 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008A00 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008B00 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008C00 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008D00 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008E00 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008F00 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009000 if necessary
+T2934 3077:276.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009100 if necessary
+T2934 3077:276.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009200 if necessary
+T2934 3077:276.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009300 if necessary
+T2934 3077:276.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009400 if necessary
+T2934 3077:276.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009500 if necessary
+T2934 3077:276.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009600 if necessary
+T2934 3077:276.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009700 if necessary
+T2934 3077:276.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009800 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009900 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009A00 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009B00 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009C00 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009D00 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009E00 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009F00 if necessary
+T2934 3077:276.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A000 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A100 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A200 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A300 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A400 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A500 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A600 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A700 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A800 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A900 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AA00 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AB00 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AC00 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AD00 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AE00 if necessary
+T2934 3077:277.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AF00 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B000 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B100 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B200 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B300 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B400 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B500 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B600 if necessary
+T2934 3077:277.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B700 if necessary
+T2934 3077:277.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B800 if necessary
+T2934 3077:277.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B900 if necessary
+T2934 3077:277.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BA00 if necessary
+T2934 3077:277.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BB00 if necessary
+T2934 3077:277.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BC00 if necessary
+T2934 3077:277.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BD00 if necessary
+T2934 3077:277.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BE00 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BF00 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C000 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C100 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C200 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C300 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C400 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C500 if necessary
+T2934 3077:277.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C600 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C700 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C800 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C900 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CA00 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CB00 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CC00 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CD00 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CE00 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CF00 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D000 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D100 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D200 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D300 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D400 if necessary
+T2934 3077:278.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D500 if necessary
+T2934 3077:278.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D600 if necessary
+T2934 3077:278.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D700 if necessary
+T2934 3077:278.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D800 if necessary
+T2934 3077:278.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D900 if necessary
+T2934 3077:278.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DA00 if necessary
+T2934 3077:278.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DB00 if necessary
+T2934 3077:278.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DC00 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DD00 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DE00 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DF00 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E000 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E100 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E200 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E300 if necessary
+T2934 3077:278.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E400 if necessary
+T2934 3077:278.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E500 if necessary
+T2934 3077:278.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E600 if necessary
+T2934 3077:278.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E700 if necessary
+T2934 3077:278.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E800 if necessary
+T2934 3077:278.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E900 if necessary
+T2934 3077:278.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EA00 if necessary
+T2934 3077:278.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EB00 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EC00 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000ED00 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EE00 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EF00 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F000 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F100 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F200 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F300 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F400 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F500 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F600 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F700 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F800 if necessary
+T2934 3077:279.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F900 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FA00 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FB00 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FC00 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FD00 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FE00 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FF00 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010000 if necessary
+T2934 3077:279.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010100 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010200 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010300 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010400 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010500 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010600 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010700 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010800 if necessary
+T2934 3077:279.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010900 if necessary
+T2934 3077:280.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010A00 if necessary
+T2934 3077:280.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010B00 if necessary
+T2934 3077:280.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010C00 if necessary
+T2934 3077:280.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010D00 if necessary
+T2934 3077:280.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010E00 if necessary
+T2934 3077:280.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010F00 if necessary
+T2934 3077:280.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011000 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011100 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011200 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011300 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011400 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011500 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011600 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011700 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011800 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011900 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011A00 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011B00 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011C00 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011D00 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011E00 if necessary
+T2934 3077:280.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011F00 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012000 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012100 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012200 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012300 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012400 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012500 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012600 if necessary
+T2934 3077:280.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012700 if necessary
+T2934 3077:280.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012800 if necessary
+T2934 3077:280.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012900 if necessary
+T2934 3077:280.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012A00 if necessary
+T2934 3077:280.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012B00 if necessary
+T2934 3077:280.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012C00 if necessary
+T2934 3077:280.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012D00 if necessary
+T2934 3077:280.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012E00 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012F00 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013000 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013100 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013200 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013300 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013400 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013500 if necessary
+T2934 3077:281.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013600 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013700 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013800 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013900 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013A00 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013B00 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013C00 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013D00 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013E00 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013F00 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014000 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014100 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014200 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014300 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014400 if necessary
+T2934 3077:281.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014500 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014600 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014700 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014800 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014900 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014A00 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014B00 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014C00 if necessary
+T2934 3077:281.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014D00 if necessary
+T2934 3077:281.792    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014E00 if necessary
+T2934 3077:281.792    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014F00 if necessary
+T2934 3077:281.792    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015000 if necessary
+T2934 3077:281.792    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015100 if necessary
+T2934 3077:281.792    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015200 if necessary
+T2934 3077:281.792    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015300 if necessary
+T2934 3077:281.792    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015400 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015500 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015600 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015700 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015800 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015900 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015A00 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015B00 if necessary
+T2934 3077:282.048    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015C00 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015D00 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015E00 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015F00 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016000 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016100 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016200 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016300 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016400 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016500 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016600 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016700 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016800 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016900 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016A00 if necessary
+T2934 3077:282.304    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016B00 if necessary
+T2934 3077:282.560    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016C00 if necessary
+T2934 3077:282.560    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016D00 if necessary
+T2934 3077:282.560    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016E00 if necessary
+T2934 3077:282.560    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016F00 if necessary
+T2934 3077:282.560    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017000 if necessary
+T2934 3077:282.560    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017100 if necessary
+T2934 3077:282.560    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017200 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017300 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017400 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017500 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017600 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017700 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017800 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017900 if necessary
+T2934 3077:282.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017A00 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017B00 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017C00 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017D00 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017E00 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017F00 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018000 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018100 if necessary
+T2934 3077:283.072    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018200 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018300 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018400 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018500 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018600 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018700 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018800 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018900 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018A00 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018B00 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018C00 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018D00 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018E00 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018F00 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019000 if necessary
+T2934 3077:283.328    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019100 if necessary
+T2934 3077:283.584    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019200 if necessary
+T2934 3077:283.584    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019300 if necessary
+T2934 3077:283.584    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019400 if necessary
+T2934 3077:283.584    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019500 if necessary
+T2934 3077:283.584    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019600 if necessary
+T2934 3077:283.584    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019700 if necessary
+T2934 3077:283.584    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019800 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019900 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019A00 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019B00 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019C00 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019D00 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019E00 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019F00 if necessary
+T2934 3077:283.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A000 if necessary
+T2934 3077:284.096    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A100 if necessary
+T2934 3077:284.096    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A200 if necessary
+T2934 3077:284.096    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A300 if necessary
+T2934 3077:284.096    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A400 if necessary
+T2934 3077:284.096    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A500 if necessary
+T2934 3077:284.096    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A600 if necessary
+T2934 3077:284.096    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A700 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A800 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A900 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AA00 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AB00 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AC00 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AD00 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AE00 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AF00 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B000 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B100 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B200 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B300 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B400 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B500 if necessary
+T2934 3077:284.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B600 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B700 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B800 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B900 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BA00 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BB00 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BC00 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BD00 if necessary
+T2934 3077:284.608    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BE00 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BF00 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C000 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C100 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C200 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C300 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C400 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C500 if necessary
+T2934 3077:284.864    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C600 if necessary
+T2934 3077:285.120    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C700 if necessary
+T2934 3077:285.120    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C800 if necessary
+T2934 3077:285.120    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C900 if necessary
+T2934 3077:285.120    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CA00 if necessary
+T2934 3077:285.120    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CB00 if necessary
+T2934 3077:285.120    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CC00 if necessary
+T2934 3077:285.120    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CD00 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CE00 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CF00 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D000 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D100 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D200 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D300 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D400 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D500 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D600 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D700 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D800 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D900 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001DA00 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001DB00 if necessary
+T2934 3077:285.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001DC00 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001DD00 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001DE00 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001DF00 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E000 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E100 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E200 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E300 if necessary
+T2934 3077:285.632    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E400 if necessary
+T2934 3077:285.888    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E500 if necessary
+T2934 3077:285.888    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E600 if necessary
+T2934 3077:285.888    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E700 if necessary
+T2934 3077:285.888    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E800 if necessary
+T2934 3077:285.888    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001E900 if necessary
+T2934 3077:285.888    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001EA00 if necessary
+T2934 3077:285.888    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001EB00 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001EC00 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001ED00 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001EE00 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001EF00 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F000 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F100 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F200 if necessary
+T2934 3077:286.144    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F300 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F400 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F500 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F600 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F700 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F800 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001F900 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001FA00 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001FB00 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001FC00 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001FD00 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001FE00 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001FF00 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020000 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020100 if necessary
+T2934 3077:286.400    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020200 if necessary
+T2934 3077:286.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020300 if necessary
+T2934 3077:286.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020400 if necessary
+T2934 3077:286.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020500 if necessary
+T2934 3077:286.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020600 if necessary
+T2934 3077:286.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020700 if necessary
+T2934 3077:286.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020800 if necessary
+T2934 3077:286.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020900 if necessary
+T2934 3077:286.912    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020A00 if necessary
+T2934 3077:286.912    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020B00 if necessary
+T2934 3077:286.912    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020C00 if necessary
+T2934 3077:286.912    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020D00 if necessary
+T2934 3077:286.912    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020E00 if necessary
+T2934 3077:286.912    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00020F00 if necessary
+T2934 3077:286.912    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021000 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021100 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021200 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021300 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021400 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021500 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021600 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021700 if necessary
+T2934 3077:287.168    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021800 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021900 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021A00 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021B00 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021C00 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021D00 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021E00 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00021F00 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022000 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022100 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022200 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022300 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022400 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022500 if necessary
+T2934 3077:287.424    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022600 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022700 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022800 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022900 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022A00 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022B00 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022C00 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022D00 if necessary
+T2934 3077:287.680    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022E00 if necessary
+T2934 3077:287.936    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00022F00 if necessary
+T2934 3077:287.936    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023000 if necessary
+T2934 3077:287.936    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023100 if necessary
+T2934 3077:287.936    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023200 if necessary
+T2934 3077:287.936    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023300 if necessary
+T2934 3077:287.936    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023400 if necessary
+T2934 3077:287.936    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023500 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023600 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023700 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023800 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023900 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023A00 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023B00 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023C00 if necessary
+T2934 3077:288.192    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023D00 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023E00 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00023F00 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024000 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024100 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024200 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024300 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024400 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024500 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024600 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024700 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024800 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024900 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024A00 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024B00 if necessary
+T2934 3077:288.448    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024C00 if necessary
+T2934 3077:288.704    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024D00 if necessary
+T2934 3077:288.704    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024E00 if necessary
+T2934 3077:288.704    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00024F00 if necessary
+T2934 3077:288.704    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025000 if necessary
+T2934 3077:288.704    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025100 if necessary
+T2934 3077:288.704    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025200 if necessary
+T2934 3077:288.960    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025300 if necessary
+T2934 3077:288.960    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025400 if necessary
+T2934 3077:288.960    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025500 if necessary
+T2934 3077:288.960    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025600 if necessary
+T2934 3077:288.960    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025700 if necessary
+T2934 3077:288.960    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025800 if necessary
+T2934 3077:288.960    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025900 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025A00 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025B00 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025C00 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025D00 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025E00 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00025F00 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026000 if necessary
+T2934 3077:289.216    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026100 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026200 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026300 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026400 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026500 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026600 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026700 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026800 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026900 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026A00 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026B00 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026C00 if necessary
+T2934 3077:289.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026D00 if necessary
+T2934 3077:289.728    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026E00 if necessary
+T2934 3077:289.728    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00026F00 if necessary
+T2934 3077:289.728    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00027000 if necessary
+T2934 3077:289.728    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00027100 if necessary
+T2934 3077:289.728    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00027200 if necessary
+T2934 3077:289.984    -- End of determining dirty areas
+T2934 3077:289.984    -- Start of preparing flash programming
+T2934 3077:289.984    -- Calculating RAM usage
+T2934 3077:289.984    -- RAM usage = 10052 Bytes
+T2934 3077:289.984    -- Preserving CPU registers
+T2934 3077:289.984    -- Preparing target
+T2934 3077:289.984    -- Preserving target RAM temporarily used for programming
+T2934 3077:355.008    -- Downloading RAMCode
+T2934 3077:373.184    -- Preparing RAMCode
+T2934 3077:378.816    -- End of preparing flash programming
+T2934 3077:387.776    -- CPU speed could not be measured.
+T2934 3077:387.776    -- Start of comparing flash
+T2934 3077:387.776    -- CRC check was estimated as fastest method
+T2934 3077:437.696    -- Comparing range 0x0000 - 0x1FFFF (512 Sectors, 128 KB), using multi-block CRC calculation
+T2934 3077:548.032    -- CRC does not match for sectors 0-1, 51-67, 78, 82-83, 85-88, 90, 92-97, 99-102, 104, 106, 108, 146, 162, 167, 181-182, 218, 225, 228-230, 232, 236, 238, 242-243, 248-249, 251, 257-259, 262-263, 265, 268, 272-275, 277-278, 280-281, 283, 286, 294, 300, 303-305, 325-326, 356, 359, 370, 373, 375-376, 379-382, 403-404, 414, 435, 442, 444, 456, 460, 474-475, 481, 486, 490, 493, 497, 500, 503-504, 510
+T2934 3077:549.568    -- Comparing range 0x20000 - 0x272FF (115 Sectors, 28 KB), using multi-block CRC calculation
+T2934 3077:576.192    -- CRC does not match for sectors 7, 14, 24, 27, 31-32, 34-35, 39, 42, 52-114
+T2934 3077:578.752    -- Comparing range 0x0200 - 0x32FF (49 Sectors, 12 KB), using alternative multi-block CRC calculation
+T2934 3077:595.648    -- All CRCs match
+T2934 3077:596.160    -- Comparing range 0x4400 - 0x4DFF (10 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2934 3077:601.792    -- All CRCs match
+T2934 3077:601.792    -- Comparing range 0x4F00 - 0x51FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:605.376    -- All CRCs match
+T2934 3077:605.632    -- Comparing range 0x5400 - 0x54FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:608.960    -- All CRCs match
+T2934 3077:609.472    -- Comparing range 0x5900 - 0x59FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:612.032    -- All CRCs match
+T2934 3077:612.544    -- Comparing range 0x5B00 - 0x5BFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:615.104    -- All CRCs match
+T2934 3077:615.104    -- Comparing range 0x6200 - 0x62FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:617.920    -- All CRCs match
+T2934 3077:618.176    -- Comparing range 0x6700 - 0x67FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:620.736    -- All CRCs match
+T2934 3077:620.992    -- Comparing range 0x6900 - 0x69FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:625.088    -- All CRCs match
+T2934 3077:625.600    -- Comparing range 0x6B00 - 0x6BFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:628.160    -- All CRCs match
+T2934 3077:628.416    -- Comparing range 0x6D00 - 0x91FF (37 Sectors, 9 KB), using alternative multi-block CRC calculation
+T2934 3077:638.656    -- All CRCs match
+T2934 3077:638.912    -- Comparing range 0x9300 - 0xA1FF (15 Sectors, 3 KB), using alternative multi-block CRC calculation
+T2934 3077:646.336    -- All CRCs match
+T2934 3077:646.592    -- Comparing range 0xA300 - 0xA6FF (4 Sectors, 1024 Bytes), using alternative multi-block CRC calculation
+T2934 3077:649.920    -- All CRCs match
+T2934 3077:650.176    -- Comparing range 0xA800 - 0xB4FF (13 Sectors, 3 KB), using alternative multi-block CRC calculation
+T2934 3077:655.808    -- All CRCs match
+T2934 3077:656.064    -- Comparing range 0xB700 - 0xD9FF (35 Sectors, 8 KB), using alternative multi-block CRC calculation
+T2934 3077:666.304    -- All CRCs match
+T2934 3077:667.072    -- Comparing range 0xDB00 - 0xE0FF (6 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:671.936    -- All CRCs match
+T2934 3077:672.448    -- Comparing range 0xE200 - 0xE3FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:676.032    -- All CRCs match
+T2934 3077:676.544    -- Comparing range 0xE700 - 0xE7FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:678.848    -- All CRCs match
+T2934 3077:679.360    -- Comparing range 0xE900 - 0xEBFF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:682.432    -- All CRCs match
+T2934 3077:682.688    -- Comparing range 0xED00 - 0xEDFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:685.248    -- All CRCs match
+T2934 3077:685.504    -- Comparing range 0xEF00 - 0xF1FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:688.832    -- All CRCs match
+T2934 3077:689.344    -- Comparing range 0xF400 - 0xF7FF (4 Sectors, 1024 Bytes), using alternative multi-block CRC calculation
+T2934 3077:692.928    -- All CRCs match
+T2934 3077:692.928    -- Comparing range 0xFA00 - 0xFAFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:695.744    -- All CRCs match
+T2934 3077:696.000    -- Comparing range 0xFC00 - 0x100FF (5 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:699.584    -- All CRCs match
+T2934 3077:700.096    -- Comparing range 0x10400 - 0x105FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:703.168    -- All CRCs match
+T2934 3077:703.680    -- Comparing range 0x10800 - 0x108FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:706.240    -- All CRCs match
+T2934 3077:706.752    -- Comparing range 0x10A00 - 0x10BFF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:709.824    -- All CRCs match
+T2934 3077:710.080    -- Comparing range 0x10D00 - 0x10FFF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:713.408    -- All CRCs match
+T2934 3077:713.408    -- Comparing range 0x11400 - 0x114FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:716.224    -- All CRCs match
+T2934 3077:716.480    -- Comparing range 0x11700 - 0x117FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:719.040    -- All CRCs match
+T2934 3077:719.296    -- Comparing range 0x11A00 - 0x11AFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:721.856    -- All CRCs match
+T2934 3077:722.368    -- Comparing range 0x11C00 - 0x11DFF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:725.440    -- All CRCs match
+T2934 3077:725.696    -- Comparing range 0x11F00 - 0x125FF (7 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:730.304    -- All CRCs match
+T2934 3077:730.560    -- Comparing range 0x12700 - 0x12BFF (5 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:733.888    -- All CRCs match
+T2934 3077:734.400    -- Comparing range 0x12D00 - 0x12EFF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:737.728    -- All CRCs match
+T2934 3077:737.984    -- Comparing range 0x13200 - 0x144FF (19 Sectors, 4 KB), using alternative multi-block CRC calculation
+T2934 3077:745.152    -- All CRCs match
+T2934 3077:745.408    -- Comparing range 0x14700 - 0x163FF (29 Sectors, 7 KB), using alternative multi-block CRC calculation
+T2934 3077:754.368    -- All CRCs match
+T2934 3077:754.624    -- Comparing range 0x16500 - 0x166FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:758.464    -- All CRCs match
+T2934 3077:758.720    -- Comparing range 0x16800 - 0x171FF (10 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2934 3077:763.328    -- All CRCs match
+T2934 3077:763.584    -- Comparing range 0x17300 - 0x174FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:766.912    -- All CRCs match
+T2934 3077:767.424    -- Comparing range 0x17600 - 0x176FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:770.240    -- All CRCs match
+T2934 3077:770.752    -- Comparing range 0x17900 - 0x17AFF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:774.336    -- All CRCs match
+T2934 3077:774.592    -- Comparing range 0x17F00 - 0x192FF (20 Sectors, 5 KB), using alternative multi-block CRC calculation
+T2934 3077:781.248    -- All CRCs match
+T2934 3077:781.760    -- Comparing range 0x19500 - 0x19DFF (9 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2934 3077:786.368    -- All CRCs match
+T2934 3077:786.880    -- Comparing range 0x19F00 - 0x1B2FF (20 Sectors, 5 KB), using alternative multi-block CRC calculation
+T2934 3077:794.048    -- All CRCs match
+T2934 3077:794.304    -- Comparing range 0x1B400 - 0x1B9FF (6 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:798.144    -- All CRCs match
+T2934 3077:798.400    -- Comparing range 0x1BB00 - 0x1BBFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:801.216    -- All CRCs match
+T2934 3077:801.472    -- Comparing range 0x1BD00 - 0x1C7FF (11 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2934 3077:808.384    -- All CRCs match
+T2934 3077:808.640    -- Comparing range 0x1C900 - 0x1CBFF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:812.480    -- All CRCs match
+T2934 3077:812.736    -- Comparing range 0x1CD00 - 0x1D9FF (13 Sectors, 3 KB), using alternative multi-block CRC calculation
+T2934 3077:818.880    -- All CRCs match
+T2934 3077:819.136    -- Comparing range 0x1DC00 - 0x1E0FF (5 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:823.488    -- All CRCs match
+T2934 3077:824.000    -- Comparing range 0x1E200 - 0x1E5FF (4 Sectors, 1024 Bytes), using alternative multi-block CRC calculation
+T2934 3077:828.352    -- All CRCs match
+T2934 3077:829.120    -- Comparing range 0x1E700 - 0x1E9FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:833.728    -- All CRCs match
+T2934 3077:834.240    -- Comparing range 0x1EB00 - 0x1ECFF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:837.568    -- All CRCs match
+T2934 3077:838.080    -- Comparing range 0x1EE00 - 0x1F0FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:841.920    -- All CRCs match
+T2934 3077:842.432    -- Comparing range 0x1F200 - 0x1F3FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:845.504    -- All CRCs match
+T2934 3077:846.016    -- Comparing range 0x1F500 - 0x1F6FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:849.088    -- All CRCs match
+T2934 3077:849.600    -- Comparing range 0x1F900 - 0x1FDFF (5 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:852.928    -- All CRCs match
+T2934 3077:853.440    -- Comparing range 0x1FF00 - 0x206FF (8 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2934 3077:858.048    -- All CRCs match
+T2934 3077:858.560    -- Comparing range 0x20800 - 0x20DFF (6 Sectors, 1 KB), using alternative multi-block CRC calculation
+T2934 3077:862.912    -- All CRCs match
+T2934 3077:863.424    -- Comparing range 0x20F00 - 0x217FF (9 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2934 3077:868.544    -- All CRCs match
+T2934 3077:869.056    -- Comparing range 0x21900 - 0x21AFF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:873.152    -- All CRCs match
+T2934 3077:873.408    -- Comparing range 0x21C00 - 0x21EFF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:877.504    -- All CRCs match
+T2934 3077:878.016    -- Comparing range 0x22100 - 0x221FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T2934 3077:882.112    -- All CRCs match
+T2934 3077:882.368    -- Comparing range 0x22400 - 0x226FF (3 Sectors, 768 Bytes), using alternative multi-block CRC calculation
+T2934 3077:885.440    -- All CRCs match
+T2934 3077:885.952    -- Comparing range 0x22800 - 0x229FF (2 Sectors, 512 Bytes), using alternative multi-block CRC calculation
+T2934 3077:889.280    -- All CRCs match
+T2934 3077:889.536    -- Comparing range 0x22B00 - 0x233FF (9 Sectors, 2 KB), using alternative multi-block CRC calculation
+T2934 3077:894.656    -- All CRCs match
+T2934 3077:894.656    -- End of comparing flash
+T2934 3077:894.656    -- Start of erasing sectors
+T2934 3077:894.656    -- Erasing range 0x00000000 - 0x000001FF (  2 Sectors, 512 Bytes)
+T2934 3077:902.848    -- Erasing range 0x00003300 - 0x000043FF ( 17 Sectors, 4 KB)
+T2934 3077:922.048    -- Erasing range 0x00004E00 - 0x00004EFF (  1 Sector, 256 Bytes)
+T2934 3077:926.400    -- Erasing range 0x00005200 - 0x000053FF (  2 Sectors, 512 Bytes)
+T2934 3077:931.008    -- Erasing range 0x00005500 - 0x000058FF (  4 Sectors, 1024 Bytes)
+T2934 3077:940.736    -- Erasing range 0x00005A00 - 0x00005AFF (  1 Sector, 256 Bytes)
+T2934 3077:944.320    -- Erasing range 0x00005C00 - 0x000061FF (  6 Sectors, 1 KB)
+T2934 3077:952.256    -- Erasing range 0x00006300 - 0x000066FF (  4 Sectors, 1024 Bytes)
+T2934 3077:959.424    -- Erasing range 0x00006800 - 0x000068FF (  1 Sector, 256 Bytes)
+T2934 3077:963.008    -- Erasing range 0x00006A00 - 0x00006AFF (  1 Sector, 256 Bytes)
+T2934 3077:966.848    -- Erasing range 0x00006C00 - 0x00006CFF (  1 Sector, 256 Bytes)
+T2934 3077:970.432    -- Erasing range 0x00009200 - 0x000092FF (  1 Sector, 256 Bytes)
+T2934 3077:973.760    -- Erasing range 0x0000A200 - 0x0000A2FF (  1 Sector, 256 Bytes)
+T2934 3077:977.344    -- Erasing range 0x0000A700 - 0x0000A7FF (  1 Sector, 256 Bytes)
+T2934 3077:980.672    -- Erasing range 0x0000B500 - 0x0000B6FF (  2 Sectors, 512 Bytes)
+T2934 3077:986.816    -- Erasing range 0x0000DA00 - 0x0000DAFF (  1 Sector, 256 Bytes)
+T2934 3077:991.168    -- Erasing range 0x0000E100 - 0x0000E1FF (  1 Sector, 256 Bytes)
+T2934 3077:995.776    -- Erasing range 0x0000E400 - 0x0000E6FF (  3 Sectors, 768 Bytes)
+T2934 3078:001.920    -- Erasing range 0x0000E800 - 0x0000E8FF (  1 Sector, 256 Bytes)
+T2934 3078:005.504    -- Erasing range 0x0000EC00 - 0x0000ECFF (  1 Sector, 256 Bytes)
+T2934 3078:008.832    -- Erasing range 0x0000EE00 - 0x0000EEFF (  1 Sector, 256 Bytes)
+T2934 3078:011.904    -- Erasing range 0x0000F200 - 0x0000F3FF (  2 Sectors, 512 Bytes)
+T2934 3078:015.744    -- Erasing range 0x0000F800 - 0x0000F9FF (  2 Sectors, 512 Bytes)
+T2934 3078:020.096    -- Erasing range 0x0000FB00 - 0x0000FBFF (  1 Sector, 256 Bytes)
+T2934 3078:023.680    -- Erasing range 0x00010100 - 0x000103FF (  3 Sectors, 768 Bytes)
+T2934 3078:028.800    -- Erasing range 0x00010600 - 0x000107FF (  2 Sectors, 512 Bytes)
+T2934 3078:033.408    -- Erasing range 0x00010900 - 0x000109FF (  1 Sector, 256 Bytes)
+T2934 3078:036.992    -- Erasing range 0x00010C00 - 0x00010CFF (  1 Sector, 256 Bytes)
+T2934 3078:040.576    -- Erasing range 0x00011000 - 0x000113FF (  4 Sectors, 1024 Bytes)
+T2934 3078:047.488    -- Erasing range 0x00011500 - 0x000116FF (  2 Sectors, 512 Bytes)
+T2934 3078:053.888    -- Erasing range 0x00011800 - 0x000119FF (  2 Sectors, 512 Bytes)
+T2934 3078:061.056    -- Erasing range 0x00011B00 - 0x00011BFF (  1 Sector, 256 Bytes)
+T2934 3078:065.664    -- Erasing range 0x00011E00 - 0x00011EFF (  1 Sector, 256 Bytes)
+T2934 3078:068.992    -- Erasing range 0x00012600 - 0x000126FF (  1 Sector, 256 Bytes)
+T2934 3078:072.832    -- Erasing range 0x00012C00 - 0x00012CFF (  1 Sector, 256 Bytes)
+T2934 3078:076.928    -- Erasing range 0x00012F00 - 0x000131FF (  3 Sectors, 768 Bytes)
+T2934 3078:082.816    -- Erasing range 0x00014500 - 0x000146FF (  2 Sectors, 512 Bytes)
+T2934 3078:087.168    -- Erasing range 0x00016400 - 0x000164FF (  1 Sector, 256 Bytes)
+T2934 3078:091.520    -- Erasing range 0x00016700 - 0x000167FF (  1 Sector, 256 Bytes)
+T2934 3078:094.592    -- Erasing range 0x00017200 - 0x000172FF (  1 Sector, 256 Bytes)
+T2934 3078:097.920    -- Erasing range 0x00017500 - 0x000175FF (  1 Sector, 256 Bytes)
+T2934 3078:100.736    -- Erasing range 0x00017700 - 0x000178FF (  2 Sectors, 512 Bytes)
+T2934 3078:105.600    -- Erasing range 0x00017B00 - 0x00017EFF (  4 Sectors, 1024 Bytes)
+T2934 3078:112.512    -- Erasing range 0x00019300 - 0x000194FF (  2 Sectors, 512 Bytes)
+T2934 3078:117.632    -- Erasing range 0x00019E00 - 0x00019EFF (  1 Sector, 256 Bytes)
+T2934 3078:122.240    -- Erasing range 0x0001B300 - 0x0001B3FF (  1 Sector, 256 Bytes)
+T2934 3078:126.336    -- Erasing range 0x0001BA00 - 0x0001BAFF (  1 Sector, 256 Bytes)
+T2934 3078:129.920    -- Erasing range 0x0001BC00 - 0x0001BCFF (  1 Sector, 256 Bytes)
+T2934 3078:134.528    -- Erasing range 0x0001C800 - 0x0001C8FF (  1 Sector, 256 Bytes)
+T2934 3078:137.856    -- Erasing range 0x0001CC00 - 0x0001CCFF (  1 Sector, 256 Bytes)
+T2934 3078:141.696    -- Erasing range 0x0001DA00 - 0x0001DBFF (  2 Sectors, 512 Bytes)
+T2934 3078:146.816    -- Erasing range 0x0001E100 - 0x0001E1FF (  1 Sector, 256 Bytes)
+T2934 3078:150.656    -- Erasing range 0x0001E600 - 0x0001E6FF (  1 Sector, 256 Bytes)
+T2934 3078:153.984    -- Erasing range 0x0001EA00 - 0x0001EAFF (  1 Sector, 256 Bytes)
+T2934 3078:157.824    -- Erasing range 0x0001ED00 - 0x0001EDFF (  1 Sector, 256 Bytes)
+T2934 3078:161.152    -- Erasing range 0x0001F100 - 0x0001F1FF (  1 Sector, 256 Bytes)
+T2934 3078:164.992    -- Erasing range 0x0001F400 - 0x0001F4FF (  1 Sector, 256 Bytes)
+T2934 3078:168.832    -- Erasing range 0x0001F700 - 0x0001F8FF (  2 Sectors, 512 Bytes)
+T2934 3078:173.952    -- Erasing range 0x0001FE00 - 0x0001FEFF (  1 Sector, 256 Bytes)
+T2934 3078:177.792    -- Erasing range 0x00020700 - 0x000207FF (  1 Sector, 256 Bytes)
+T2934 3078:181.632    -- Erasing range 0x00020E00 - 0x00020EFF (  1 Sector, 256 Bytes)
+T2934 3078:185.472    -- Erasing range 0x00021800 - 0x000218FF (  1 Sector, 256 Bytes)
+T2934 3078:189.312    -- Erasing range 0x00021B00 - 0x00021BFF (  1 Sector, 256 Bytes)
+T2934 3078:192.640    -- Erasing range 0x00021F00 - 0x000220FF (  2 Sectors, 512 Bytes)
+T2934 3078:197.760    -- Erasing range 0x00022200 - 0x000223FF (  2 Sectors, 512 Bytes)
+T2934 3078:202.112    -- Erasing range 0x00022700 - 0x000227FF (  1 Sector, 256 Bytes)
+T2934 3078:205.952    -- Erasing range 0x00022A00 - 0x00022AFF (  1 Sector, 256 Bytes)
+T2934 3078:210.048    -- Erasing range 0x00023400 - 0x000272FF ( 63 Sectors, 15 KB)
+T2934 3078:273.536    -- End of erasing sectors
+T2934 3078:273.536    -- Start of flash programming
+T2934 3078:273.536    -- Programming range 0x00000000 - 0x000001FF (  2 Sectors, 512 Bytes)
+T2934 3078:275.584    -- Programming range 0x00003300 - 0x000043FF ( 17 Sectors, 4 KB)
+T2934 3078:304.768    -- Programming range 0x00004E00 - 0x00004EFF (  1 Sector, 256 Bytes)
+T2934 3078:322.688    -- Programming range 0x00005200 - 0x000053FF (  2 Sectors, 512 Bytes)
+T2934 3078:328.320    -- Programming range 0x00005500 - 0x000058FF (  4 Sectors, 1024 Bytes)
+T2934 3078:337.792    -- Programming range 0x00005A00 - 0x00005AFF (  1 Sector, 256 Bytes)
+T2934 3078:347.520    -- Programming range 0x00005C00 - 0x000061FF (  6 Sectors, 1 KB)
+T2934 3078:352.384    -- Programming range 0x00006300 - 0x000066FF (  4 Sectors, 1024 Bytes)
+T2934 3078:363.648    -- Programming range 0x00006800 - 0x000068FF (  1 Sector, 256 Bytes)
+T2934 3078:371.840    -- Programming range 0x00006A00 - 0x00006AFF (  1 Sector, 256 Bytes)
+T2934 3078:376.704    -- Programming range 0x00006C00 - 0x00006CFF (  1 Sector, 256 Bytes)
+T2934 3078:381.056    -- Programming range 0x00009200 - 0x000092FF (  1 Sector, 256 Bytes)
+T2934 3078:385.664    -- Programming range 0x0000A200 - 0x0000A2FF (  1 Sector, 256 Bytes)
+T2934 3078:390.016    -- Programming range 0x0000A700 - 0x0000A7FF (  1 Sector, 256 Bytes)
+T2934 3078:394.624    -- Programming range 0x0000B500 - 0x0000B6FF (  2 Sectors, 512 Bytes)
+T2934 3078:399.232    -- Programming range 0x0000DA00 - 0x0000DAFF (  1 Sector, 256 Bytes)
+T2934 3078:405.376    -- Programming range 0x0000E100 - 0x0000E1FF (  1 Sector, 256 Bytes)
+T2934 3078:410.752    -- Programming range 0x0000E400 - 0x0000E6FF (  3 Sectors, 768 Bytes)
+T2934 3078:416.128    -- Programming range 0x0000E800 - 0x0000E8FF (  1 Sector, 256 Bytes)
+T2934 3078:423.808    -- Programming range 0x0000EC00 - 0x0000ECFF (  1 Sector, 256 Bytes)
+T2934 3078:429.184    -- Programming range 0x0000EE00 - 0x0000EEFF (  1 Sector, 256 Bytes)
+T2934 3078:434.048    -- Programming range 0x0000F200 - 0x0000F3FF (  2 Sectors, 512 Bytes)
+T2934 3078:439.680    -- Programming range 0x0000F800 - 0x0000F9FF (  2 Sectors, 512 Bytes)
+T2934 3078:446.080    -- Programming range 0x0000FB00 - 0x0000FBFF (  1 Sector, 256 Bytes)
+T2934 3078:452.480    -- Programming range 0x00010100 - 0x000103FF (  3 Sectors, 768 Bytes)
+T2934 3078:457.856    -- Programming range 0x00010600 - 0x000107FF (  2 Sectors, 512 Bytes)
+T2934 3078:465.024    -- Programming range 0x00010900 - 0x000109FF (  1 Sector, 256 Bytes)
+T2934 3078:471.424    -- Programming range 0x00010C00 - 0x00010CFF (  1 Sector, 256 Bytes)
+T2934 3078:476.800    -- Programming range 0x00011000 - 0x000113FF (  4 Sectors, 1024 Bytes)
+T2934 3078:481.408    -- Programming range 0x00011500 - 0x000116FF (  2 Sectors, 512 Bytes)
+T2934 3078:491.136    -- Programming range 0x00011800 - 0x000119FF (  2 Sectors, 512 Bytes)
+T2934 3078:497.536    -- Programming range 0x00011B00 - 0x00011BFF (  1 Sector, 256 Bytes)
+T2934 3078:506.240    -- Programming range 0x00011E00 - 0x00011EFF (  1 Sector, 256 Bytes)
+T2934 3078:519.040    -- Programming range 0x00012600 - 0x000126FF (  1 Sector, 256 Bytes)
+T2934 3078:529.024    -- Programming range 0x00012C00 - 0x00012CFF (  1 Sector, 256 Bytes)
+T2934 3078:536.704    -- Programming range 0x00012F00 - 0x000131FF (  3 Sectors, 768 Bytes)
+T2934 3078:543.872    -- Programming range 0x00014500 - 0x000146FF (  2 Sectors, 512 Bytes)
+T2934 3078:552.064    -- Programming range 0x00016400 - 0x000164FF (  1 Sector, 256 Bytes)
+T2934 3078:559.488    -- Programming range 0x00016700 - 0x000167FF (  1 Sector, 256 Bytes)
+T2934 3078:565.376    -- Programming range 0x00017200 - 0x000172FF (  1 Sector, 256 Bytes)
+T2934 3078:572.800    -- Programming range 0x00017500 - 0x000175FF (  1 Sector, 256 Bytes)
+T2934 3078:577.920    -- Programming range 0x00017700 - 0x000178FF (  2 Sectors, 512 Bytes)
+T2934 3078:583.040    -- Programming range 0x00017B00 - 0x00017EFF (  4 Sectors, 1024 Bytes)
+T2934 3078:589.184    -- Programming range 0x00019300 - 0x000194FF (  2 Sectors, 512 Bytes)
+T2934 3078:598.400    -- Programming range 0x00019E00 - 0x00019EFF (  1 Sector, 256 Bytes)
+T2934 3078:605.056    -- Programming range 0x0001B300 - 0x0001B3FF (  1 Sector, 256 Bytes)
+T2934 3078:610.432    -- Programming range 0x0001BA00 - 0x0001BAFF (  1 Sector, 256 Bytes)
+T2934 3078:615.552    -- Programming range 0x0001BC00 - 0x0001BCFF (  1 Sector, 256 Bytes)
+T2934 3078:620.928    -- Programming range 0x0001C800 - 0x0001C8FF (  1 Sector, 256 Bytes)
+T2934 3078:625.792    -- Programming range 0x0001CC00 - 0x0001CCFF (  1 Sector, 256 Bytes)
+T2934 3078:631.936    -- Programming range 0x0001DA00 - 0x0001DBFF (  2 Sectors, 512 Bytes)
+T2934 3078:637.056    -- Programming range 0x0001E100 - 0x0001E1FF (  1 Sector, 256 Bytes)
+T2934 3078:643.456    -- Programming range 0x0001E600 - 0x0001E6FF (  1 Sector, 256 Bytes)
+T2934 3078:648.576    -- Programming range 0x0001EA00 - 0x0001EAFF (  1 Sector, 256 Bytes)
+T2934 3078:653.440    -- Programming range 0x0001ED00 - 0x0001EDFF (  1 Sector, 256 Bytes)
+T2934 3078:658.304    -- Programming range 0x0001F100 - 0x0001F1FF (  1 Sector, 256 Bytes)
+T2934 3078:663.168    -- Programming range 0x0001F400 - 0x0001F4FF (  1 Sector, 256 Bytes)
+T2934 3078:669.568    -- Programming range 0x0001F700 - 0x0001F8FF (  2 Sectors, 512 Bytes)
+T2934 3078:681.088    -- Programming range 0x0001FE00 - 0x0001FEFF (  1 Sector, 256 Bytes)
+T2934 3078:691.328    -- Programming range 0x00020700 - 0x000207FF (  1 Sector, 256 Bytes)
+T2934 3078:699.264    -- Programming range 0x00020E00 - 0x00020EFF (  1 Sector, 256 Bytes)
+T2934 3078:705.664    -- Programming range 0x00021800 - 0x000218FF (  1 Sector, 256 Bytes)
+T2934 3078:712.320    -- Programming range 0x00021B00 - 0x00021BFF (  1 Sector, 256 Bytes)
+T2934 3078:717.952    -- Programming range 0x00021F00 - 0x000220FF (  2 Sectors, 512 Bytes)
+T2934 3078:723.072    -- Programming range 0x00022200 - 0x000223FF (  2 Sectors, 512 Bytes)
+T2934 3078:729.472    -- Programming range 0x00022700 - 0x000227FF (  1 Sector, 256 Bytes)
+T2934 3078:736.384    -- Programming range 0x00022A00 - 0x00022AFF (  1 Sector, 256 Bytes)
+T2934 3078:742.528    -- Programming range 0x00023400 - 0x000272FF ( 63 Sectors, 15 KB)
+T2934 3078:826.752    -- End of flash programming
+T2934 3078:827.008    -- 0x0000 - 0x01FF (  2 Sectors, 512 Bytes)
+T2934 3078:827.264    -- 0x3300 - 0x43FF ( 17 Sectors, 4 KB)
+T2934 3078:827.520    -- 0x4E00 - 0x4EFF (  1 Sector, 256 Bytes)
+T2934 3078:827.520    -- 0x5200 - 0x53FF (  2 Sectors, 512 Bytes)
+T2934 3078:827.520    -- 0x5500 - 0x58FF (  4 Sectors, 1024 Bytes)
+T2934 3078:827.776    -- 0x5A00 - 0x5AFF (  1 Sector, 256 Bytes)
+T2934 3078:827.776    -- 0x5C00 - 0x61FF (  6 Sectors, 1 KB)
+T2934 3078:828.032    -- 0x6300 - 0x66FF (  4 Sectors, 1024 Bytes)
+T2934 3078:828.032    -- 0x6800 - 0x68FF (  1 Sector, 256 Bytes)
+T2934 3078:828.544    -- 0x6A00 - 0x6AFF (  1 Sector, 256 Bytes)
+T2934 3078:828.800    -- 0x6C00 - 0x6CFF (  1 Sector, 256 Bytes)
+T2934 3078:828.800    -- 0x9200 - 0x92FF (  1 Sector, 256 Bytes)
+T2934 3078:829.056    -- 0xA200 - 0xA2FF (  1 Sector, 256 Bytes)
+T2934 3078:829.312    -- 0xA700 - 0xA7FF (  1 Sector, 256 Bytes)
+T2934 3078:829.312    -- 0xB500 - 0xB6FF (  2 Sectors, 512 Bytes)
+T2934 3078:829.568    -- 0xDA00 - 0xDAFF (  1 Sector, 256 Bytes)
+T2934 3078:829.568    -- 0xE100 - 0xE1FF (  1 Sector, 256 Bytes)
+T2934 3078:829.824    -- 0xE400 - 0xE6FF (  3 Sectors, 768 Bytes)
+T2934 3078:830.080    -- 0xE800 - 0xE8FF (  1 Sector, 256 Bytes)
+T2934 3078:830.336    -- 0xEC00 - 0xECFF (  1 Sector, 256 Bytes)
+T2934 3078:830.336    -- 0xEE00 - 0xEEFF (  1 Sector, 256 Bytes)
+T2934 3078:830.592    -- 0xF200 - 0xF3FF (  2 Sectors, 512 Bytes)
+T2934 3078:830.592    -- 0xF800 - 0xF9FF (  2 Sectors, 512 Bytes)
+T2934 3078:830.848    -- 0xFB00 - 0xFBFF (  1 Sector, 256 Bytes)
+T2934 3078:830.848    -- 0x10100 - 0x103FF (  3 Sectors, 768 Bytes)
+T2934 3078:831.104    -- 0x10600 - 0x107FF (  2 Sectors, 512 Bytes)
+T2934 3078:831.360    -- 0x10900 - 0x109FF (  1 Sector, 256 Bytes)
+T2934 3078:831.360    -- 0x10C00 - 0x10CFF (  1 Sector, 256 Bytes)
+T2934 3078:831.616    -- 0x11000 - 0x113FF (  4 Sectors, 1024 Bytes)
+T2934 3078:831.616    -- 0x11500 - 0x116FF (  2 Sectors, 512 Bytes)
+T2934 3078:831.616    -- 0x11800 - 0x119FF (  2 Sectors, 512 Bytes)
+T2934 3078:831.616    -- 0x11B00 - 0x11BFF (  1 Sector, 256 Bytes)
+T2934 3078:831.872    -- 0x11E00 - 0x11EFF (  1 Sector, 256 Bytes)
+T2934 3078:832.128    -- 0x12600 - 0x126FF (  1 Sector, 256 Bytes)
+T2934 3078:832.128    -- 0x12C00 - 0x12CFF (  1 Sector, 256 Bytes)
+T2934 3078:832.384    -- 0x12F00 - 0x131FF (  3 Sectors, 768 Bytes)
+T2934 3078:832.384    -- 0x14500 - 0x146FF (  2 Sectors, 512 Bytes)
+T2934 3078:832.640    -- 0x16400 - 0x164FF (  1 Sector, 256 Bytes)
+T2934 3078:832.640    -- 0x16700 - 0x167FF (  1 Sector, 256 Bytes)
+T2934 3078:832.640    -- 0x17200 - 0x172FF (  1 Sector, 256 Bytes)
+T2934 3078:832.896    -- 0x17500 - 0x175FF (  1 Sector, 256 Bytes)
+T2934 3078:832.896    -- 0x17700 - 0x178FF (  2 Sectors, 512 Bytes)
+T2934 3078:833.152    -- 0x17B00 - 0x17EFF (  4 Sectors, 1024 Bytes)
+T2934 3078:833.152    -- 0x19300 - 0x194FF (  2 Sectors, 512 Bytes)
+T2934 3078:833.408    -- 0x19E00 - 0x19EFF (  1 Sector, 256 Bytes)
+T2934 3078:833.408    -- 0x1B300 - 0x1B3FF (  1 Sector, 256 Bytes)
+T2934 3078:833.664    -- 0x1BA00 - 0x1BAFF (  1 Sector, 256 Bytes)
+T2934 3078:833.664    -- 0x1BC00 - 0x1BCFF (  1 Sector, 256 Bytes)
+T2934 3078:833.664    -- 0x1C800 - 0x1C8FF (  1 Sector, 256 Bytes)
+T2934 3078:833.920    -- 0x1CC00 - 0x1CCFF (  1 Sector, 256 Bytes)
+T2934 3078:833.920    -- 0x1DA00 - 0x1DBFF (  2 Sectors, 512 Bytes)
+T2934 3078:834.176    -- 0x1E100 - 0x1E1FF (  1 Sector, 256 Bytes)
+T2934 3078:834.176    -- 0x1E600 - 0x1E6FF (  1 Sector, 256 Bytes)
+T2934 3078:834.432    -- 0x1EA00 - 0x1EAFF (  1 Sector, 256 Bytes)
+T2934 3078:834.688    -- 0x1ED00 - 0x1EDFF (  1 Sector, 256 Bytes)
+T2934 3078:834.688    -- 0x1F100 - 0x1F1FF (  1 Sector, 256 Bytes)
+T2934 3078:834.688    -- 0x1F400 - 0x1F4FF (  1 Sector, 256 Bytes)
+T2934 3078:834.688    -- 0x1F700 - 0x1F8FF (  2 Sectors, 512 Bytes)
+T2934 3078:834.944    -- 0x1FE00 - 0x1FEFF (  1 Sector, 256 Bytes)
+T2934 3078:834.944    -- 0x20700 - 0x207FF (  1 Sector, 256 Bytes)
+T2934 3078:835.200    -- 0x20E00 - 0x20EFF (  1 Sector, 256 Bytes)
+T2934 3078:835.456    -- 0x21800 - 0x218FF (  1 Sector, 256 Bytes)
+T2934 3078:835.456    -- 0x21B00 - 0x21BFF (  1 Sector, 256 Bytes)
+T2934 3078:835.712    -- 0x21F00 - 0x220FF (  2 Sectors, 512 Bytes)
+T2934 3078:835.712    -- 0x22200 - 0x223FF (  2 Sectors, 512 Bytes)
+T2934 3078:835.712    -- 0x22700 - 0x227FF (  1 Sector, 256 Bytes)
+T2934 3078:835.712    -- 0x22A00 - 0x22AFF (  1 Sector, 256 Bytes)
+T2934 3078:835.968    -- 0x23400 - 0x272FF ( 63 Sectors, 15 KB)
+T2934 3078:836.224    -- Start of restoring
+T2934 3078:836.224    -- Restoring RAMCode
+T2934 3078:882.560    -- Restoring target memory
+T2934 3078:931.968    -- Restore target
+T2934 3078:931.968    -- Restoring CPU registers
+T2934 3078:931.968    -- End of restoring
+T2934 3078:932.224    -- Bank 0 @ 0x00000000: 68 ranges affected (47104 bytes)
+T2934 3078:932.224    -- Total: 1.642s (Prepare: 0.097s, Compare: 0.506s, Erase: 0.378s, Program & Verify: 0.604s, Restore: 0.053s)
+T2934 3078:932.224    -- Program & Verify speed: 75 KB/s
+T2934 3078:940.672 - 1669.612ms returns 47104 (0xB800)
+T2934 3078:940.928 JLINK_ResetPullsRESET(ON)
+T2934 3078:940.928 - 0.022ms
+T2934 3078:940.928 JLINK_ResetNoHalt()
+T2934 3078:941.184   InitTarget() start
+T2934 3078:941.184    J-Link Script File: Executing InitTarget()
+T2934 3078:941.184   InitTarget()
+T2934 3078:943.488   InitTarget() end - Took 2.38ms
+T2934 3078:944.256   Found SW-DP with ID 0x0BC11477
+T2934 3078:946.048   DPIDR: 0x0BC11477
+T2934 3078:946.048   CoreSight SoC-400 or earlier
+T2934 3078:946.048   AP map detection skipped. Manually configured AP map found.
+T2934 3078:946.048   AP[0]: AHB-AP (IDR: Not set)
+T2934 3078:946.816   AP[0]: Core found
+T2934 3078:946.816   AP[0]: AHB-AP ROM base: 0x41003000
+T2934 3078:947.328   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+T2934 3078:947.328   Found Cortex-M0 r0p1, Little endian.
+T2934 3078:947.584   -- Max. mem block: 0x000010C0
+T2934 3078:947.584   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2934 3078:947.840   CPU_ReadMem(4 bytes @ 0xE0002000)
+T2934 3078:948.352   FPUnit: 4 code (BP) slots and 0 literal slots
+T2934 3078:948.352   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2934 3078:948.608   CPU_ReadMem(4 bytes @ 0xE0001000)
+T2934 3078:948.864   CoreSight components:
+T2934 3078:949.120   ROMTbl[0] @ 41003000
+T2934 3078:949.120   CPU_ReadMem(64 bytes @ 0x41003000)
+T2934 3078:949.632   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+T2934 3078:950.400   [0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+T2934 3078:950.400   ROMTbl[1] @ E00FF000
+T2934 3078:950.400   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T2934 3078:951.168   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T2934 3078:951.424   [1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+T2934 3078:951.424   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T2934 3078:952.192   [1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+T2934 3078:952.192   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T2934 3078:952.448   [1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+T2934 3078:952.448   CPU_ReadMem(32 bytes @ 0x41006FE0)
+T2934 3078:953.216   [0][1]: 41006000 CID B105900D PID 001BB932 MTB-M0+
+T2934 3078:953.216   JLINK_Reset()
+T2934 3078:953.216     CPU_ReadMem(4 bytes @ 0x20000000)
+T2934 3078:953.472     CPU_WriteMem(4 bytes @ 0x20000000)
+T2934 3078:953.984     ResetTarget() start
+T2934 3078:953.984      J-Link Script File: Executing ResetTarget()
+T2934 3078:954.496     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2934 3078:954.752     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2934 3078:955.264     CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T2934 3078:956.800     CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T2934 3078:957.568     CPU_ReadMem(4 bytes @ 0x41002100)
+T2934 3078:958.080     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T2934 3078:958.592     ResetTarget() end - Took 4.50ms
+T2934 3078:962.688     CPU_WriteMem(4 bytes @ 0xE0002000)
+T2934 3078:962.944     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T2934 3078:963.456     CPU_ReadMem(4 bytes @ 0xE0001000)
+T2934 3078:963.712     CPU_WriteMem(4 bytes @ 0xE0001000)
+T2934 3078:963.968   - 10.935ms
+T2934 3078:964.224   JLINK_Go()
+T2934 3078:964.224     CPU_ReadMem(4 bytes @ 0xE0001000)
+T2934 3078:964.480     CPU_WriteMem(4 bytes @ 0xE0001000)
+T2934 3078:964.992     CPU_WriteMem(4 bytes @ 0xE0001004)
+T2934 3078:965.760     Memory map 'after startup completion point' is active
+T2934 3078:965.760   - 1.763ms
+T2934 3078:965.760 - 25.096ms
+T2A38 3078:966.016 JLINK_EMU_GetList(InterfaceMask = 0x00000001, MaxInfos = 0x00000032) 
+T2A38 3078:968.576   [0]: USB, S/N: 801041338
+T2A38 3078:968.576 - 2.538ms returns 1
+T2A38 3078:968.832 JLINK_EMU_GetList(InterfaceMask = 0x00000002, MaxInfos = 0x00000032) 
+T2A38 3078:994.432 - 25.605ms returns 0
+T2934 3078:994.688 JLINK_Close()
+T2934 3079:013.632 - 18.897ms
+T2934 3079:013.632   
+T2934 3079:013.632   Closed
