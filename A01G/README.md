@@ -16,17 +16,34 @@ In the development of our helmet, careful consideration has been given to the po
 
 Here are the regulated power supplies' requirements:
 
-+ 3.3 Supply: 
++ 3.3V Supply: 
   + Total Current (Worst Case): 501mA
   + Total Current (Worst Case) with 10% Safety Margin: 550mA
-+ 5.5 Supply: 
++ 5V Supply: 
   + Total Current (Worst Case): 1136mA
   + Total Current (Worst Case) with 10% Safety Margin: 1300mA (rounded up from 1249.2mA for practicality)
   
 These values ensure our regulators are capable of handling the system's power needs under all conditions. The attached table provides a detailed view of the power requirements, and these tables also are available in the BOM.
 
+![Power Requirements](https://github.com/ese5160/a01g-components-pins-power-circuit-crusaders/blob/main/images/power_requirements.jpeg)
+
+
+Webench - Ti Design: 
++ The DC/DC 3.3V regulator (TPS62082): 
+
+![3.3V Regulator](https://github.com/ese5160/a01g-components-pins-power-circuit-crusaders/blob/main/images/62082.png)
+
+![3.3V Chart](https://github.com/ese5160/a01g-components-pins-power-circuit-crusaders/blob/main/images/62082_charts.png)
+
++ The DC/DC 5V regulator (TPS61023): 
+
+![5V Regulator](https://github.com/ese5160/a01g-components-pins-power-circuit-crusaders/blob/main/images/tps61023.png)
+
+![5V Chart](https://github.com/ese5160/a01g-components-pins-power-circuit-crusaders/blob/main/images/61023_charts.png)
 
 ## 3 Power Architecture
+
+![Power Architecture](https://github.com/ese5160/a01g-components-pins-power-circuit-crusaders/blob/main/images/power_architecture.png)
 
 ## 4 MCU Pin & Protocol Assignment
 Software Components
