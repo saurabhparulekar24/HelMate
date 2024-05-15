@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "nm_bsp_samd21.h": "c",
+        "secret.h": "c",
+        "lis2dh_reg.h": "c",
+        "lsm6dso_reg.h": "c",
+        "i2cdriver.h": "c",
+        "imu.h": "c",
+        "setupflags.h": "c",
+        "http_client.h": "c",
+        "socket.h": "c"
+    }
+}

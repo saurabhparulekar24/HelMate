@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "nm_bsp_samd21.h": "c",
+        "secret.h": "c",
+        "gp2y0a21yk0f.h": "c",
+        "state_machine.h": "c",
+        "apa102c_led_strip.h": "c",
+        "led_task.h": "c",
+        "stdio_serial.h": "c",
+        "wifihandler.h": "c",
+        "imu.h": "c",
+        "accelerometer_task.h": "c",
+        "serialconsole.h": "c",
+        "asf.h": "c",
+        "clithread.h": "c"
+    }
+}

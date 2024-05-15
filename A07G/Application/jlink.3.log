@@ -1,0 +1,9 @@
+T1734 082:109.032   SEGGER J-Link V7.96d Log File
+T1734 082:109.160   DLL Compiled: Apr 10 2024 08:27:25
+T1734 082:109.240   Logging started @ 2024-04-13 16:44
+T1734 082:109.312   Process: C:\Program Files (x86)\Atmel\Studio\7.0\atbackend\atbackend.exe
+T1734 082:109.376 - 66.131ms
+T1734 082:117.208 JLINK_Close()
+T1734 082:121.168 - 3.959ms
+T1734 082:121.264   
+T1734 082:121.328   Closed

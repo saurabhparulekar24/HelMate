@@ -1,0 +1,396 @@
+T203C 3163:175.424   SEGGER J-Link V7.96d Log File
+T203C 3163:175.680   DLL Compiled: Apr 10 2024 08:27:25
+T203C 3163:175.680   Logging started @ 2024-05-02 21:02
+T203C 3163:175.680   Process: C:\Program Files (x86)\Atmel\Studio\7.0\atbackend\atbackend.exe
+T203C 3163:175.680 - 13646.792ms
+T203C 3163:183.616 JLINK_ExecCommand("Device = ATSAMD21G18A", ...). 
+T203C 3163:184.640   Device "ATSAMD21G18A" selected.
+T203C 3163:185.152 - 1.096ms returns 0x00
+T203C 3163:208.704 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T203C 3163:209.728 - 0.964ms returns 0x00
+T203C 3163:209.728 JLINK_SetSpeed(4000)
+T203C 3163:209.984 - 0.202ms
+T203C 3163:210.240 JLINK_ResetPullsRESET(OFF)
+T203C 3163:210.240 - 0.076ms
+T203C 3163:210.240 JLINK_Connect()
+T203C 3163:210.752   InitTarget() start
+T203C 3163:210.752    J-Link Script File: Executing InitTarget()
+T203C 3163:210.752   InitTarget()
+T203C 3163:214.080   InitTarget() end - Took 3.12ms
+T203C 3163:215.104   Found SW-DP with ID 0x0BC11477
+T203C 3163:217.920   DPIDR: 0x0BC11477
+T203C 3163:217.920   CoreSight SoC-400 or earlier
+T203C 3163:218.176   Scanning AP map to find all available APs
+T203C 3163:218.688   AP[1]: Stopped AP scan as end of AP map has been reached
+T203C 3163:218.944   AP[0]: AHB-AP (IDR: 0x04770031)
+T203C 3163:218.944   Iterating through AP map to find AHB-AP to use
+T203C 3163:219.968   AP[0]: Core found
+T203C 3163:220.224   AP[0]: AHB-AP ROM base: 0x41003000
+T203C 3163:220.736   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+T203C 3163:220.736   Found Cortex-M0 r0p1, Little endian.
+T203C 3163:221.248   -- Max. mem block: 0x00002BA8
+T203C 3163:221.760   Cortex-M: The connected J-Link (S/N 801041483) uses an old firmware module: V1 (current is 2)
+T203C 3163:221.760   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T203C 3163:222.528   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T203C 3163:222.784   CPU_ReadMem(4 bytes @ 0xE0002000)
+T203C 3163:223.296   FPUnit: 4 code (BP) slots and 0 literal slots
+T203C 3163:223.552   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T203C 3163:223.808   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T203C 3163:224.320   CPU_ReadMem(4 bytes @ 0xE0001000)
+T203C 3163:224.576   CPU_WriteMem(4 bytes @ 0xE0001000)
+T203C 3163:225.088   CoreSight components:
+T203C 3163:225.344   ROMTbl[0] @ 41003000
+T203C 3163:225.344   CPU_ReadMem(64 bytes @ 0x41003000)
+T203C 3163:226.112   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+T203C 3163:226.624   [0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+T203C 3163:226.624   ROMTbl[1] @ E00FF000
+T203C 3163:226.880   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T203C 3163:227.648   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T203C 3163:228.416   [1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+T203C 3163:228.416   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T203C 3163:228.928   [1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+T203C 3163:229.184   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T203C 3163:229.696   [1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+T203C 3163:229.696   CPU_ReadMem(32 bytes @ 0x41006FE0)
+T203C 3163:230.464   [0][1]: 41006000 CID B105900D PID 001BB932 MTB-M0+
+T203C 3163:230.720 - 20.319ms returns 0x00
+T203C 3163:230.720 JLINK_ExecCommand("ExcludeFlashCacheRange 0x0 - 0x40000", ...). 
+T203C 3163:230.720 - 0.001ms returns 0x00
+T203C 3163:230.720 JLINK_Halt()
+T203C 3163:233.792 - 2.983ms returns 0x00
+T203C 3163:235.072 JLINK_JTAG_GetDeviceID(DeviceIndex = 0)
+T203C 3163:235.328 - 0.040ms returns 0
+T203C 3163:235.328 JLINK_ReadMemU32(0x41002018, 0x1 Items)
+T203C 3163:235.328   CPU_ReadMem(4 bytes @ 0x41002018)
+T203C 3163:235.840   Data:  05 03 01 10
+T203C 3163:235.840 - 0.504ms returns 1 (0x1)
+T3F88 3163:247.360 JLINK_IsHalted()
+T3F88 3163:248.128 - 0.887ms returns TRUE
+T3F88 3163:248.128 JLINK_GetMOEs(...)
+T3F88 3163:248.128   CPU_ReadMem(4 bytes @ 0xE000ED30)
+T3F88 3163:248.640 - 0.441ms returns 0x01
+T3F88 3163:248.640 JLINK_ReadReg(R15 (PC))
+T3F88 3163:248.896 - 0.033ms returns 0x00016396
+T203C 3163:321.600 JLINK_BeginDownload(Flags = 0x00000000)
+T203C 3163:321.600 - 0.067ms
+T203C 3163:321.600 JLINK_WriteMem(0x00012000, 0xB3D8 Bytes, ...)
+T203C 3163:321.856   Data:  68 68 00 20 35 8A 01 00 19 8A 01 00 19 8A 01 00 ...
+T203C 3163:321.856   completely In flash
+T203C 3163:322.112 - 0.491ms returns 0xB3D8
+T203C 3163:322.368 JLINK_WriteMem(0x0001D3D8, 0x23C Bytes, ...)
+T203C 3163:322.368   Data:  00 00 00 00 0C 00 00 00 00 00 00 00 00 00 00 00 ...
+T203C 3163:322.368   completely In flash
+T203C 3163:322.368 - 0.089ms returns 0x23C
+T3F88 3163:448.064 JLINK_IsHalted()
+T3F88 3163:448.064 - 0.071ms returns TRUE
+T203C 3163:449.344 JLINK_EndDownload()
+T203C 3163:449.600   CPU_ReadMem(4 bytes @ 0x41006004)
+T203C 3163:450.112   CPU_ReadMem(4 bytes @ 0xE000ED90)
+T203C 3163:450.624    -- --------------------------------------
+T203C 3163:450.624    -- Flash bank @ 0x00000000: Default: L2 verify disabled because algorithm performs L1 verify
+T203C 3163:450.624    -- Start of determining dirty areas in flash cache
+T203C 3163:450.624    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012000 if necessary
+T203C 3163:450.624    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012100 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012200 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012300 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012400 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012500 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012600 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012700 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012800 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012900 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012A00 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012B00 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012C00 if necessary
+T203C 3163:450.880    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012D00 if necessary
+T203C 3163:451.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012E00 if necessary
+T203C 3163:451.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00012F00 if necessary
+T203C 3163:451.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013000 if necessary
+T203C 3163:451.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013100 if necessary
+T203C 3163:451.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013200 if necessary
+T203C 3163:451.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013300 if necessary
+T203C 3163:451.136    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013400 if necessary
+T203C 3163:451.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013500 if necessary
+T203C 3163:451.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013600 if necessary
+T203C 3163:451.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013700 if necessary
+T203C 3163:451.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013800 if necessary
+T203C 3163:451.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013900 if necessary
+T203C 3163:451.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013A00 if necessary
+T203C 3163:451.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013B00 if necessary
+T203C 3163:451.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013C00 if necessary
+T203C 3163:451.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013D00 if necessary
+T203C 3163:451.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013E00 if necessary
+T203C 3163:451.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00013F00 if necessary
+T203C 3163:451.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014000 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014100 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014200 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014300 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014400 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014500 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014600 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014700 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014800 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014900 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014A00 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014B00 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014C00 if necessary
+T203C 3163:451.904    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014D00 if necessary
+T203C 3163:452.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014E00 if necessary
+T203C 3163:452.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00014F00 if necessary
+T203C 3163:452.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015000 if necessary
+T203C 3163:452.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015100 if necessary
+T203C 3163:452.160    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015200 if necessary
+T203C 3163:452.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015300 if necessary
+T203C 3163:452.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015400 if necessary
+T203C 3163:452.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015500 if necessary
+T203C 3163:452.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015600 if necessary
+T203C 3163:452.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015700 if necessary
+T203C 3163:452.416    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015800 if necessary
+T203C 3163:452.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015900 if necessary
+T203C 3163:452.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015A00 if necessary
+T203C 3163:452.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015B00 if necessary
+T203C 3163:452.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015C00 if necessary
+T203C 3163:452.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015D00 if necessary
+T203C 3163:452.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015E00 if necessary
+T203C 3163:452.672    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00015F00 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016000 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016100 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016200 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016300 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016400 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016500 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016600 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016700 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016800 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016900 if necessary
+T203C 3163:452.928    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016A00 if necessary
+T203C 3163:453.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016B00 if necessary
+T203C 3163:453.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016C00 if necessary
+T203C 3163:453.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016D00 if necessary
+T203C 3163:453.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016E00 if necessary
+T203C 3163:453.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00016F00 if necessary
+T203C 3163:453.184    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017000 if necessary
+T203C 3163:453.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017100 if necessary
+T203C 3163:453.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017200 if necessary
+T203C 3163:453.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017300 if necessary
+T203C 3163:453.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017400 if necessary
+T203C 3163:453.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017500 if necessary
+T203C 3163:453.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017600 if necessary
+T203C 3163:453.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017700 if necessary
+T203C 3163:453.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017800 if necessary
+T203C 3163:453.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017900 if necessary
+T203C 3163:453.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017A00 if necessary
+T203C 3163:453.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017B00 if necessary
+T203C 3163:453.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017C00 if necessary
+T203C 3163:453.696    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017D00 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017E00 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00017F00 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018000 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018100 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018200 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018300 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018400 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018500 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018600 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018700 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018800 if necessary
+T203C 3163:453.952    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018900 if necessary
+T203C 3163:454.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018A00 if necessary
+T203C 3163:454.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018B00 if necessary
+T203C 3163:454.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018C00 if necessary
+T203C 3163:454.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018D00 if necessary
+T203C 3163:454.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018E00 if necessary
+T203C 3163:454.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00018F00 if necessary
+T203C 3163:454.208    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019000 if necessary
+T203C 3163:454.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019100 if necessary
+T203C 3163:454.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019200 if necessary
+T203C 3163:454.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019300 if necessary
+T203C 3163:454.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019400 if necessary
+T203C 3163:454.464    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019500 if necessary
+T203C 3163:454.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019600 if necessary
+T203C 3163:454.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019700 if necessary
+T203C 3163:454.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019800 if necessary
+T203C 3163:454.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019900 if necessary
+T203C 3163:454.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019A00 if necessary
+T203C 3163:454.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019B00 if necessary
+T203C 3163:454.720    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019C00 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019D00 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019E00 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00019F00 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A000 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A100 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A200 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A300 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A400 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A500 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A600 if necessary
+T203C 3163:454.976    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A700 if necessary
+T203C 3163:455.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A800 if necessary
+T203C 3163:455.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001A900 if necessary
+T203C 3163:455.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AA00 if necessary
+T203C 3163:455.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AB00 if necessary
+T203C 3163:455.232    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AC00 if necessary
+T203C 3163:455.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AD00 if necessary
+T203C 3163:455.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AE00 if necessary
+T203C 3163:455.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001AF00 if necessary
+T203C 3163:455.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B000 if necessary
+T203C 3163:455.488    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B100 if necessary
+T203C 3163:455.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B200 if necessary
+T203C 3163:455.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B300 if necessary
+T203C 3163:455.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B400 if necessary
+T203C 3163:455.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B500 if necessary
+T203C 3163:455.744    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B600 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B700 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B800 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001B900 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BA00 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BB00 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BC00 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BD00 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BE00 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001BF00 if necessary
+T203C 3163:456.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C000 if necessary
+T203C 3163:456.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C100 if necessary
+T203C 3163:456.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C200 if necessary
+T203C 3163:456.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C300 if necessary
+T203C 3163:456.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C400 if necessary
+T203C 3163:456.256    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C500 if necessary
+T203C 3163:456.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C600 if necessary
+T203C 3163:456.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C700 if necessary
+T203C 3163:456.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C800 if necessary
+T203C 3163:456.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001C900 if necessary
+T203C 3163:456.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CA00 if necessary
+T203C 3163:456.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CB00 if necessary
+T203C 3163:456.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CC00 if necessary
+T203C 3163:456.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CD00 if necessary
+T203C 3163:456.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CE00 if necessary
+T203C 3163:456.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001CF00 if necessary
+T203C 3163:456.768    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D000 if necessary
+T203C 3163:457.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D100 if necessary
+T203C 3163:457.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D200 if necessary
+T203C 3163:457.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D300 if necessary
+T203C 3163:457.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D400 if necessary
+T203C 3163:457.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D500 if necessary
+T203C 3163:457.024    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0001D600 if necessary
+T203C 3163:457.024    -- End of determining dirty areas
+T203C 3163:457.024    -- Start of preparing flash programming
+T203C 3163:457.024    -- Calculating RAM usage
+T203C 3163:457.280    -- RAM usage = 3908 Bytes
+T203C 3163:457.280    -- Preserving CPU registers
+T203C 3163:457.280    -- Preparing target
+T203C 3163:457.280    -- Preserving target RAM temporarily used for programming
+T203C 3163:478.272    -- Downloading RAMCode
+T203C 3163:494.656    -- Preparing RAMCode
+T203C 3163:500.544    -- End of preparing flash programming
+T203C 3163:516.416    -- CPU speed could not be measured.
+T203C 3163:516.416    -- Start of comparing flash
+T203C 3163:516.416    -- CRC check was estimated as fastest method
+T203C 3163:593.984    -- Comparing range 0x12000 - 0x19FFF (128 Sectors, 32 KB), using multi-block CRC calculation
+T203C 3163:617.536    -- CRC does not match for sectors 0-5, 7-9, 11-15, 17-19, 21-127
+T203C 3163:617.792    -- Comparing range 0x1A000 - 0x1D6FF (55 Sectors, 13 KB), using multi-block CRC calculation
+T203C 3163:629.312    -- CRC does not match for sectors 0-54
+T203C 3163:630.080    -- Comparing range 0x12600 - 0x126FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T203C 3163:634.176    -- All CRCs match
+T203C 3163:634.432    -- Comparing range 0x12A00 - 0x12AFF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T203C 3163:638.272    -- All CRCs match
+T203C 3163:638.784    -- Comparing range 0x13000 - 0x130FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T203C 3163:642.368    -- All CRCs match
+T203C 3163:642.624    -- Comparing range 0x13400 - 0x134FF (1 Sector, 256 Bytes), using alternative multi-block CRC calculation
+T203C 3163:646.720    -- All CRCs match
+T203C 3163:646.720    -- End of comparing flash
+T203C 3163:646.976    -- Start of erasing sectors
+T203C 3163:646.976    -- Erasing range 0x00012000 - 0x000125FF (  6 Sectors, 1 KB)
+T203C 3163:656.704    -- Erasing range 0x00012700 - 0x000129FF (  3 Sectors, 768 Bytes)
+T203C 3163:670.528    -- Erasing range 0x00012B00 - 0x00012FFF (  5 Sectors, 1 KB)
+T203C 3163:679.232    -- Erasing range 0x00013100 - 0x000133FF (  3 Sectors, 768 Bytes)
+T203C 3163:688.448    -- Erasing range 0x00013500 - 0x0001D6FF (162 Sectors, 40 KB)
+T203C 3163:851.264    -- End of erasing sectors
+T203C 3163:851.520    -- Start of flash programming
+T203C 3163:851.520    -- Programming range 0x00012000 - 0x000125FF (  6 Sectors, 1 KB)
+T203C 3163:854.080    -- Programming range 0x00012700 - 0x000129FF (  3 Sectors, 768 Bytes)
+T203C 3163:872.256    -- Programming range 0x00012B00 - 0x00012FFF (  5 Sectors, 1 KB)
+T203C 3163:889.152    -- Programming range 0x00013100 - 0x000133FF (  3 Sectors, 768 Bytes)
+T203C 3163:894.272    -- Programming range 0x00013500 - 0x0001B4FF (128 Sectors, 32 KB)
+T203C 3164:264.192    -- Programming range 0x0001B500 - 0x0001D6FF ( 34 Sectors, 8 KB)
+T203C 3164:342.784    -- End of flash programming
+T203C 3164:342.784    -- 0x12000 - 0x125FF (  6 Sectors, 1 KB)
+T203C 3164:342.784    -- 0x12700 - 0x129FF (  3 Sectors, 768 Bytes)
+T203C 3164:342.784    -- 0x12B00 - 0x12FFF (  5 Sectors, 1 KB)
+T203C 3164:342.784    -- 0x13100 - 0x133FF (  3 Sectors, 768 Bytes)
+T203C 3164:343.040    -- 0x13500 - 0x1D6FF (162 Sectors, 40 KB)
+T203C 3164:343.040    -- Start of restoring
+T203C 3164:343.040    -- Restoring RAMCode
+T203C 3164:358.400    -- Restoring target memory
+T203C 3164:378.368    -- Restore target
+T203C 3164:378.624    -- Restoring CPU registers
+T203C 3164:378.624    -- End of restoring
+T203C 3164:378.624    -- Bank 0 @ 0x00000000: 5 ranges affected (45824 bytes)
+T203C 3164:378.624    -- Total: 0.921s (Prepare: 0.059s, Compare: 0.130s, Erase: 0.204s, Program & Verify: 0.500s, Restore: 0.026s)
+T203C 3164:378.624    -- Program & Verify speed: 89 KB/s
+T203C 3164:390.400 - 941.103ms returns 45824 (0xB300)
+T203C 3164:390.400 JLINK_ResetPullsRESET(ON)
+T203C 3164:390.400 - 0.030ms
+T203C 3164:390.656 JLINK_ResetNoHalt()
+T203C 3164:390.912   InitTarget() start
+T203C 3164:390.912    J-Link Script File: Executing InitTarget()
+T203C 3164:390.912   InitTarget()
+T203C 3164:393.728   InitTarget() end - Took 2.86ms
+T203C 3164:394.496   Found SW-DP with ID 0x0BC11477
+T203C 3164:397.056   DPIDR: 0x0BC11477
+T203C 3164:397.056   CoreSight SoC-400 or earlier
+T203C 3164:397.056   AP map detection skipped. Manually configured AP map found.
+T203C 3164:397.056   AP[0]: AHB-AP (IDR: Not set)
+T203C 3164:398.080   AP[0]: Core found
+T203C 3164:398.080   AP[0]: AHB-AP ROM base: 0x41003000
+T203C 3164:398.848   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+T203C 3164:398.848   Found Cortex-M0 r0p1, Little endian.
+T203C 3164:399.104   -- Max. mem block: 0x00002860
+T203C 3164:399.104   Cortex-M: The connected J-Link (S/N 801041483) uses an old firmware module: V1 (current is 2)
+T203C 3164:399.104   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T203C 3164:399.616   CPU_ReadMem(4 bytes @ 0xE0002000)
+T203C 3164:400.128   FPUnit: 4 code (BP) slots and 0 literal slots
+T203C 3164:400.128   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T203C 3164:400.384   CPU_ReadMem(4 bytes @ 0xE0001000)
+T203C 3164:400.896   CoreSight components:
+T203C 3164:401.152   ROMTbl[0] @ 41003000
+T203C 3164:401.152   CPU_ReadMem(64 bytes @ 0x41003000)
+T203C 3164:401.920   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+T203C 3164:402.432   [0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+T203C 3164:402.688   ROMTbl[1] @ E00FF000
+T203C 3164:402.688   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T203C 3164:403.200   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T203C 3164:404.224   [1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+T203C 3164:404.224   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T203C 3164:405.248   [1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+T203C 3164:405.248   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T203C 3164:405.760   [1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+T203C 3164:405.760   CPU_ReadMem(32 bytes @ 0x41006FE0)
+T203C 3164:406.272   [0][1]: 41006000 CID B105900D PID 001BB932 MTB-M0+
+T203C 3164:406.272   JLINK_Reset()
+T203C 3164:406.272     CPU_ReadMem(4 bytes @ 0x20000000)
+T203C 3164:406.784     CPU_WriteMem(4 bytes @ 0x20000000)
+T203C 3164:407.296     ResetTarget() start
+T203C 3164:407.296      J-Link Script File: Executing ResetTarget()
+T203C 3164:407.808     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T203C 3164:408.320     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T203C 3164:408.576     CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T203C 3164:411.136     CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T203C 3164:411.392     CPU_ReadMem(4 bytes @ 0x41002100)
+T203C 3164:412.160     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T203C 3164:412.416     ResetTarget() end - Took 5.20ms
+T203C 3164:416.512     CPU_WriteMem(4 bytes @ 0xE0002000)
+T203C 3164:417.280     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T203C 3164:417.536     CPU_ReadMem(4 bytes @ 0xE0001000)
+T203C 3164:418.048     CPU_WriteMem(4 bytes @ 0xE0001000)
+T203C 3164:418.560   - 12.341ms
+T203C 3164:418.816   JLINK_Go()
+T203C 3164:419.072     CPU_ReadMem(4 bytes @ 0xE0001000)
+T203C 3164:419.584     CPU_WriteMem(4 bytes @ 0xE0001000)
+T203C 3164:420.352     CPU_WriteMem(4 bytes @ 0xE0001004)
+T203C 3164:421.632     Memory map 'after startup completion point' is active
+T203C 3164:421.632   - 2.712ms
+T203C 3164:421.632 - 31.106ms
+T203C 3164:428.032 JLINK_Close()
+T203C 3164:440.064 - 12.169ms
+T203C 3164:440.320   
+T203C 3164:440.320   Closed
